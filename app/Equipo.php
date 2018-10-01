@@ -6,5 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Equipo extends Model
 {
-    //
+    //referencia de modelo-tabla
+    protected $table = 'equipos';
+
+    //campos asignables
+    protected $fillable = [
+        'id', 'nombre'
+    ];
 }

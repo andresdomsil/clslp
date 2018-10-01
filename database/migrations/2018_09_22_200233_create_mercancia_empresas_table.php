@@ -14,7 +14,8 @@ class CreateMercanciaEmpresasTable extends Migration
     public function up()
     {
         Schema::create('mercancia_empresas', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('tipo_mercancias_id');
+            $table->integer('empresas_id');
             $table->timestamps();
         });
     }

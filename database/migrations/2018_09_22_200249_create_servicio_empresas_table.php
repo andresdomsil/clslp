@@ -14,7 +14,8 @@ class CreateServicioEmpresasTable extends Migration
     public function up()
     {
         Schema::create('servicio_empresas', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('tipo_servicios_id');
+            $table->integer('empresas_id');
             $table->timestamps();
         });
     }
