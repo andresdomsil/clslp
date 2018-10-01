@@ -14,6 +14,7 @@ class CreateEquipoEmpresasTable extends Migration
     public function up()
     {
         Schema::create('equipo_empresas', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('tipo_equipos_id');
             $table->integer('empresa_id');
             $table->timestamps();

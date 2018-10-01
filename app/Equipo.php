@@ -11,6 +11,6 @@ class Equipo extends Model
 
     //campos asignables
     protected $fillable = [
-        'id', 'nombre'
+        'nombre'
     ];
 }

@@ -11,6 +11,6 @@ class Mercancia extends Model
 
     //campos asignables
     protected $fillable = [
-        'id', 'nombre'
+        'nombre'
     ];
 }
