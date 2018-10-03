@@ -14,9 +14,9 @@ class CreateSucursalsTable extends Migration
     public function up()
     {
         Schema::create('sucursals', function (Blueprint $table) {
-            $table->increments('sucursales_id')->unsigned();
-            $table->integer('empresa_id')->unsigned();
-            $table->integer('estados_id')->unsigned();
+            $table->unsignedInteger('sucursales_id');
+            $table->unsignedInteger('empresa_id');
+            $table->unsignedInteger('estados_id');
             $table->timestamps();
         });
     }

@@ -14,9 +14,9 @@ class CreateServicioEmpresasTable extends Migration
     public function up()
     {
         Schema::create('servicio_empresas', function (Blueprint $table) {
-            $table->increments('servicioempresas_id')->unsigned();
-            $table->integer('tipo_servicios_id')->unsigned();
-            $table->integer('empresas_id')->unsigned();
+            $table->unsignedInteger('servicioempresas_id');
+            $table->unsignedInteger('tipo_servicios_id');
+            $table->unsignedInteger('empresas_id');
             $table->timestamps();
         });
     }

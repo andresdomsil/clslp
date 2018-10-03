@@ -14,14 +14,14 @@ class CreateEmpresasTable extends Migration
     public function up()
     {
         Schema::create('empresas', function (Blueprint $table) {
-            $table->increments('empresas_id')->unsigned();
+            $table->unsignedInteger('empresas_id');
             $table->string('nombre', 255)->default(null);
             $table->string('direccion', 255)->default(null);
             $table->string('nombre_contacto', 45)->default(null);
-            $table->integer('telefono')->unsigned();
+            $table->integer('telefono', 45);
             $table->string('email', 45)->default(null);
             $table->string('web', 45)->default(null);
-            $table->integer('cantidad_unidades')->unsigned();
+            $table->integer('cantidad_unidades', 45);
             $table->string('antiguedad_unidades', 45)->default(null);
             $table->boolean('programa_immex')->default(null);
             $table->boolean('material_peligros')->default(null);

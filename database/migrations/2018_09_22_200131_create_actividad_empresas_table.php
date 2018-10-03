@@ -14,9 +14,9 @@ class CreateActividadEmpresasTable extends Migration
     public function up()
     {
         Schema::create('actividad_empresas', function (Blueprint $table) {
-            $table->increments('actividadempresas_id')->unsigned();
-            $table->integer('tipos_actividad_id')->unsigned();
-            $table->integer('empresas_id')->unsigned();
+            $table->unsignedInteger('actividadempresas_id');
+            $table->unsignedInteger('tipos_actividad_id');
+            $table->unsignedInteger('empresas_id');
 
             $table->timestamps();
         });
