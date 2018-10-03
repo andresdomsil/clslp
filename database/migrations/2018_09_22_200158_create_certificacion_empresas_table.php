@@ -14,9 +14,9 @@ class CreateCertificacionEmpresasTable extends Migration
     public function up()
     {
         Schema::create('certificacion_empresas', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('certificaciones_id');
-            $table->integer('empresas_id');
+            $table->increments('certificacionempresas_id')->unsigned();
+            $table->integer('certificaciones_id')->unsigned();
+            $table->integer('empresas_id')->unsigned();
 
             $table->timestamps();
         });

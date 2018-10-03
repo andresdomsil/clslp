@@ -14,7 +14,7 @@ class CreateMercanciasTable extends Migration
     public function up()
     {
         Schema::create('mercancias', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('mercancias_id')->unsigned();
             $table->string('nombre', 45)->default(null);
             $table->timestamps();
         });
