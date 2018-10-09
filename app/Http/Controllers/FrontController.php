@@ -16,8 +16,13 @@ class FrontController extends Controller
         return view('contacto');
     }
 
-    public function reviews()
+    public function pagina()
     {
-        return view('reviews');
+        return view('pagina');
+    }
+
+    public function ayuda()
+    {
+        return view('ayuda');
     }
 }
