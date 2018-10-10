@@ -13,4 +13,8 @@ class Equipo extends Model
     protected $fillable = [
         'nombre'
     ];
+
+    public function equipoEmpresas(){
+        return $this->hasMany(EquipoEmpresa::class);
+    }
 }

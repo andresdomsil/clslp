@@ -13,4 +13,8 @@ class Servicio extends Model
     protected $fillable = [
         'nombre'
     ];
+
+    public function servicioEmpresas(){
+        return $this->hasMany(ServicioEmpresa::class);
+    }
 }

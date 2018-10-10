@@ -11,6 +11,14 @@ class ActividadEmpresa extends Model
 
     //campos asignables
     protected $fillable = [
-        'tipos_actividad_id', 'empresas_id'
+        'actividad_id', 'empresas_id'
     ];
+
+    public function empresa(){
+        return $this->belongsTo(Empresa::class);
+    }
+
+    public function actividad(){
+        return $this->belongsTo(Actividad::class);
+    }
 }

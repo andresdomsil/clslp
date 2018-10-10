@@ -13,4 +13,8 @@ class Mercancia extends Model
     protected $fillable = [
         'nombre'
     ];
+
+    public function mercanciaEmpresas(){
+        return $this->hasMany(MercanciaEmpresas::class);
+    }
 }

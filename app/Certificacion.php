@@ -13,4 +13,8 @@ class Certificacion extends Model
     protected $fillable = [
         'nombre'
     ];
+
+    public function certificacionEmpresas(){
+        return $this->hasMany(CertificacionEmpresas::class);
+    }
 }

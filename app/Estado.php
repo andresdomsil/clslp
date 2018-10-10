@@ -13,4 +13,12 @@ class Estado extends Model
     protected $fillable = [
         'nombre'
     ];
+
+    public function sucursales(){
+        return $this->hasMany(Sucursal::class);
+    }
+
+    public function rutas(){
+        return $this->hasMany(Ruta::class);
+    }
 }

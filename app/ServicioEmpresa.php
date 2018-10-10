@@ -11,6 +11,14 @@ class ServicioEmpresa extends Model
 
     //campos asignables
     protected $fillable = [
-        'tipo_servicios_id', 'empresas_id'
+        'servicios_id', 'empresas_id'
     ];
+
+    public function servicio(){
+        return $this->belongsTo(Servicio::class);
+    }
+
+    public function empresa(){
+        return $this->belongsTo(Empresa::class);
+    }
 }

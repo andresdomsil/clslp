@@ -13,4 +13,12 @@ class CertificacionEmpresa extends Model
     protected $fillable = [
         'certificaciones_id', 'empresas_id'
     ];
+
+    public function empresa(){
+        return $this->belongsTo(Empresa::class);
+    }
+
+    public function certificacion(){
+        return $this->belongsTo(Certificacion::class);
+    }
 }
