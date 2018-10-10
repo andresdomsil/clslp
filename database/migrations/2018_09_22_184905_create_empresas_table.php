@@ -18,7 +18,7 @@ class CreateEmpresasTable extends Migration
             $table->string('nombre', 255)->default(null);
             $table->string('direccion', 255)->default(null);
             $table->string('nombre_contacto', 45)->default(null);
-            $table->integer('telefono', 45);
+            $table->integer('telefono', 45)->default(null);
             $table->string('email', 45)->default(null);
             $table->string('web', 45)->default(null);
             $table->integer('cantidad_unidades', 45);

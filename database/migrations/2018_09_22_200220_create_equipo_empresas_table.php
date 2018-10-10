@@ -15,8 +15,8 @@ class CreateEquipoEmpresasTable extends Migration
     {
         Schema::create('equipo_empresas', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('tipo_equipos_id');
-            $table->unsignedInteger('empresa_id');
+            $table->unsignedInteger('tipo_equipos_id')->default(null);
+            $table->unsignedInteger('empresa_id')->default(null);
             $table->timestamps();
         });
     }
