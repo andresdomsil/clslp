@@ -25,4 +25,9 @@ class FrontController extends Controller
     {
         return view('ayuda');
     }
+
+    public function app()
+    {
+        return view('app');
+    }
 }

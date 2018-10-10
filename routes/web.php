@@ -12,3 +12,4 @@
 */
 
 //Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::get('app', 'Auth\FrontController')->name('app');
