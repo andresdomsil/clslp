@@ -14,7 +14,7 @@ class CreateRutasTable extends Migration
     public function up()
     {
         Schema::create('rutas', function (Blueprint $table) {
-            $table->unsignedInteger('rutas_id');
+            $table->increments('id');
             $table->unsignedInteger('empresa_id');
             $table->unsignedInteger('estados_id');
             $table->timestamps();
