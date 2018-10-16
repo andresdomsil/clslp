@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSucursalsTable extends Migration
+class CreateActividadsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateSucursalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sucursals', function (Blueprint $table) {
+        Schema::create('actividad', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('empresa_id')->default(null);
-            $table->unsignedInteger('estados_id')->default(null);
+            $table->string('nombre', 45)->default(null);
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateSucursalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sucursals');
+        Schema::dropIfExists('actividad');
     }
 }

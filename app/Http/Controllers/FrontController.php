@@ -11,23 +11,9 @@ class FrontController extends Controller
         return view('welcome');
     }
 
-    public function contacto()
-    {
-        return view('contacto');
-    }
-
-    public function pagina()
-    {
-        return view('pagina');
-    }
-
-    public function ayuda()
-    {
-        return view('ayuda');
-    }
-
     public function app()
     {
-        return view('app');
+        return view('child');
     }
+
 }
