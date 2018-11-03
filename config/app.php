@@ -150,6 +150,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Laravel\Laravel\Passport\PassportServiceProvider::class, //<------------------------------------REVISAR
 
         /*
          * Application Service Providers...
