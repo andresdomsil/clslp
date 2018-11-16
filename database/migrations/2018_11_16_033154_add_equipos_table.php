@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateActividadEmpresasTable extends Migration
+class AddEquiposTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateActividadEmpresasTable extends Migration
      */
     public function up()
     {
-        Schema::create('actividad_empresas', function (Blueprint $table) {
+        Schema::create('equipos', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('tipos_actividad_id')->default(null);
-            $table->unsignedInteger('empresas_id')->default(null);
-
+            $table->string('nombre', 45)->default(null);
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateActividadEmpresasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('actividad_empresas');
+        Schema::dropIfExists('equipos');
     }
 }

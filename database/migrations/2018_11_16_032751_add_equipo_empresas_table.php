@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEstadosTable extends Migration
+class AddEquipoEmpresasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateEstadosTable extends Migration
      */
     public function up()
     {
-        Schema::create('estados', function (Blueprint $table) {
+        Schema::create('equipo_empresas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre', 45)->default(null);
+            $table->unsignedInteger('tipo_equipos_id')->default(null);
+            $table->unsignedInteger('empresa_id')->default(null);
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateEstadosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('estados');
+        Schema::dropIfExists('equipo_empresas');
     }
 }

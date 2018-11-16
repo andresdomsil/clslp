@@ -4,17 +4,21 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Equipo extends Model
+class EquipoEmpresa extends Model
 {
     //referencia de modelo-tabla
-    protected $table = 'equipos';
+    protected $table = 'equipo_empresas';
 
     //campos asignables
     protected $fillable = [
-        'nombre'
+        'tipo_equipos_id', 'empresa_id'
     ];
 
-    public function equipoEmpresas(){
-        return $this->hasMany(EquipoEmpresa::class);
+    public function empresa(){
+        return $this->belongsTo(Empresa::class);
+    }
+
+    public function equipo(){
+        return $this->belongsTo(Equipo::class);
     }
 }

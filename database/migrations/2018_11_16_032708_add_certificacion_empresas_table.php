@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMercanciaEmpresasTable extends Migration
+class AddCertificacionEmpresasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateMercanciaEmpresasTable extends Migration
      */
     public function up()
     {
-        Schema::create('mercancia_empresas', function (Blueprint $table) {
+        Schema::create('certificacion_empresas', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('tipo_mercancias_id')->default(null);
+            $table->unsignedInteger('certificaciones_id')->default(null);
             $table->unsignedInteger('empresas_id')->default(null);
+
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateMercanciaEmpresasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mercancia_empresas');
+        Schema::dropIfExists('certificacion_empresas');
     }
 }

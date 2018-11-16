@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSucursalsTable extends Migration
+class AddMercanciaEmpresasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateSucursalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sucursals', function (Blueprint $table) {
+        Schema::create('mercancia_empresas', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('empresa_id')->default(null);
-            $table->unsignedInteger('estados_id')->default(null);
+            $table->unsignedInteger('tipo_mercancias_id')->default(null);
+            $table->unsignedInteger('empresas_id')->default(null);
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateSucursalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sucursals');
+        Schema::dropIfExists('mercancia_empresas');
     }
 }

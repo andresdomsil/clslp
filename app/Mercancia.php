@@ -4,17 +4,21 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Mercancia extends Model
+class MercanciaEmpresa extends Model
 {
     //referencia de modelo-tabla
-    protected $table = 'mercancias';
+    protected $table = 'mercancia_empresas';
 
     //campos asignables
     protected $fillable = [
-        'nombre'
+        'tipo_mercancias_id', 'empresas_id'
     ];
 
-    public function mercanciaEmpresas(){
-        return $this->hasMany(MercanciaEmpresas::class);
+    public function empresa(){
+        return $this->belongsTo(Empresa::class);
+    }
+
+    public function mercancia(){
+        return $this->belongsTo(Mercancia::class);
     }
 }

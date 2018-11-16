@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateServiciosTable extends Migration
+class AddActividadEmpresasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateServiciosTable extends Migration
      */
     public function up()
     {
-        Schema::create('servicios', function (Blueprint $table) {
+        Schema::create('actividad_empresas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre', 45)->default(null);
+            $table->unsignedInteger('tipos_actividad_id')->default(null);
+            $table->unsignedInteger('empresas_id')->default(null);
+
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateServiciosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('servicios');
+        Schema::dropIfExists('actividad_empresas');
     }
 }
