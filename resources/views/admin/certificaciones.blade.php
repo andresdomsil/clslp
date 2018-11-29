@@ -348,8 +348,8 @@
                 </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="data"><i class="fa fa-circle-o"></i>Actividades</a></li>
-            <li class="active"><a href="certificaciones"><i class="fa fa-circle-o"></i> Cerificaciones</a></li>
+            <li class="active"><a href="certificaciones"><i class="fa fa-circle-o"></i>Actividades</a></li>
+            <li><a href="data"><i class="fa fa-circle-o"></i>Certificaciones</a></li>
             <li class="active"><a href="empresas"><i class="fa fa-circle-o"></i> Empresas</a></li>
             <li class="active"><a href="equipos"><i class="fa fa-circle-o"></i> Equipos</a></li>
             <li class="active"><a href="estados"><i class="fa fa-circle-o"></i> Estados</a></li>
