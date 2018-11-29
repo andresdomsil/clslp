@@ -348,8 +348,8 @@
                 </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="certificaciones"><i class="fa fa-circle-o"></i>Actividades</a></li>
-            <li><a href="data"><i class="fa fa-circle-o"></i>Certificaciones</a></li>
+            <li class="active"><a href="data"><i class="fa fa-circle-o"></i>Actividades</a></li>
+            <li><a href="certificaciones"><i class="fa fa-circle-o"></i>Certificaciones</a></li>
             <li class="active"><a href="empresas"><i class="fa fa-circle-o"></i> Empresas</a></li>
             <li class="active"><a href="equipos"><i class="fa fa-circle-o"></i> Equipos</a></li>
             <li class="active"><a href="estados"><i class="fa fa-circle-o"></i> Estados</a></li>
@@ -397,7 +397,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Actividades</h3>
+              <h3 class="box-title">Servicio</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -405,36 +405,36 @@
                 <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Actividad</th>
-                  <th>Fecha de creación de la actividad</th>
+                  <th>Certificación</th>
+                  <th>Fecha de certificación</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                   <td>01</td>
                   <td>
-                      Actividad 01
+                     Certificación de prueba
                   </td>
                   <td>5 NOVIEMBRE 2018</td>
                 </tr>
                 <tr>
                   <td>02</td>
                   <td>
-                      Actividad 02
+                      Otra certificación de prueba
                   </td>
                   <td>6 NOVIEMBRE 2018</td>
                 </tr>
                 <tr>
                   <td>03</td>
                   <td>
-                      Actividad 03
+                      Certificación 01
                   </td>
                   <td>7 NOVIEMBRE 2018</td>
                 </tr>
                 <tr>
                   <td>04</td>
                   <td>
-                      Actividad 04
+                      Certificación 02
                   </td>
                   <td>8 NOVIEMBRE 2018</td>
                 </tr>
@@ -455,38 +455,38 @@
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
-                <tr>
+                 <tr>
                   <th>ID</th>
-                  <th>Actividad</th>
-                  <th>Fecha de creación de la actividad</th>
+                  <th>Certificación</th>
+                  <th>Fecha de certificación</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                   <td>01</td>
                   <td>
-                      Actividad 01
+                     Certificación de prueba
                   </td>
                   <td>5 NOVIEMBRE 2018</td>
                 </tr>
                 <tr>
                   <td>02</td>
                   <td>
-                      Actividad 02
+                      Otra certificación de prueba
                   </td>
                   <td>6 NOVIEMBRE 2018</td>
                 </tr>
                 <tr>
                   <td>03</td>
                   <td>
-                      Actividad 03
+                      Certificación 01
                   </td>
                   <td>7 NOVIEMBRE 2018</td>
                 </tr>
                 <tr>
                   <td>04</td>
                   <td>
-                      Actividad 04
+                      Certificación 02
                   </td>
                   <td>8 NOVIEMBRE 2018</td>
                 </tr>

@@ -11,3 +11,8 @@ Route::get('user',  function(){ return view('admin.user');      } );
 Route::get('registro',  function(){ return view('admin.registro');      } );
 Route::get('data',  function(){ return view('admin.data');      } );
 Route::get('certificaciones',  function(){ return view('admin.certificaciones');      } );
+Route::get('empresas',  function(){ return view('admin.empresas');      } );
+Route::get('equipos',  function(){ return view('admin.equipos');      } );
+Route::get('estados',  function(){ return view('admin.estados');      } );
+Route::get('mercancias',  function(){ return view('admin.mercancias');      } );
+Route::get('servicios',  function(){ return view('admin.servicios');      } );
