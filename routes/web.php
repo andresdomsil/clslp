@@ -17,3 +17,4 @@ Route::get('equipos',  function(){ return view('admin.equipos');      } );
 Route::get('estados',  function(){ return view('admin.estados');      } );
 Route::get('mercancias',  function(){ return view('admin.mercancias');      } );
 Route::get('servicios',  function(){ return view('admin.servicios');      } );
+Route::get('calendario',  function(){ return view('admin.calendario');      } );

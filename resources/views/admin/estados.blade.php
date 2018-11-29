@@ -32,7 +32,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="../../index2.html" class="logo">
+    <a href="data" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>CL</b>SLP</span>
       <!-- logo for regular state and mobile devices -->
@@ -359,7 +359,7 @@
           </ul>
         </li>
         <li>
-          <a href="../calendar.html">
+          <a href="calendario">
             <i class="fa fa-calendar"></i> <span>Calendario</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-red">3</small>

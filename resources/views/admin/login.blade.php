@@ -33,7 +33,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Inicia Sesión para comenzar</p>
 
-    <form action="../../index2.html" method="post">
+    <form action="data" method="post">
       <div class="form-group has-feedback">
         <input type="email" class="form-control" placeholder="Email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
