@@ -51,24 +51,13 @@
           </div>
         </div>
         <!-- /.col -->
-        <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+        <div class="col-xs-12">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Iniciar sesión</button>
         </div>
         <!-- /.col -->
       </div>
     </form>
 
-    <div class="social-auth-links text-center">
-      <p>- ó -</p>
-      <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Iniciar Sesión usando
-        Facebook</a>
-      <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Iniciar Sesión usando
-        Google+</a>
-    </div>
-    <!-- /.social-auth-links -->
-
-    <a href="#">Olvide mi Contraseña</a><br>
-    <a href="register.html" class="text-center">Registrar un nuevo usuario</a>
 
   </div>
   <!-- /.login-box-body -->
