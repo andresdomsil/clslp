@@ -86,8 +86,8 @@
       <ul class="sidebar-menu">
         <li class="header">Menu</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="/data"><i class="fa fa-link"></i> <span>Empresas</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Alta de complementos</span></a></li>
+        <li class="active"><a href="{{ route('admin') }}"><i class="fa fa-link"></i> <span>Empresas</span></a></li>
+        <li><a href="{{ route('agregar') }}"><i class="fa fa-link"></i> <span>Alta de complementos</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -117,10 +117,9 @@
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2019 <a href="#">Sedely</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2019 <a href="#">Sedely</a>.</strong> Todos los derechos reservados.
   </footer>
 
   <!-- /.control-sidebar -->
