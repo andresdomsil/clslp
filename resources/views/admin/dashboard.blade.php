@@ -1,5 +1,5 @@
 @extends('admin.layout')
- @section('content')
+@section('content')
 
     <section class="content-header">
       <h1>
@@ -11,9 +11,6 @@
       </ol>
     </section>
     <br>
-    <section class="content-header">
-    	<a class="btn btn-icon btn-pure btn-primary" href="{{ route('add.empresa') }}"><i class="fa fa-plus"></i> Agregar empresa</a>
-    </section>
 
     <!-- Main content -->
     <section class="content">

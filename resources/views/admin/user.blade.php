@@ -1,5 +1,5 @@
 @extends('admin.layout')
- @section('content')
+@section('content')
 
     <section class="content-header">
       <h1>

@@ -5,11 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Panel de Administración</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="/adminlte/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" href="/adminlte/css/AdminLTE.min.css">
-  <link rel="stylesheet" href="/adminlte/css/skins/skin-blue.min.css">
+  <link rel="stylesheet" href="css/AdminLTE.min.css">
+  <link rel="stylesheet" href="css/skins/skin-blue.min.css">
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -86,8 +86,7 @@
       <ul class="sidebar-menu">
         <li class="header">Menu</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="{{ route('admin') }}"><i class="fa fa-link"></i> <span>Empresas</span></a></li>
-        <li><a href="{{ route('agregar') }}"><i class="fa fa-link"></i> <span>Alta de complementos</span></a></li>
+
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -132,11 +131,11 @@
 <!-- REQUIRED JS SCRIPTS -->
 
 <!-- jQuery 2.2.3 -->
-<script src="/adminlte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
-<script src="/adminlte/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
-<script src="/adminlte/js/app.min.js"></script>
+<script src="js/app.min.js"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the

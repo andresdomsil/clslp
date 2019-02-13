@@ -4,9 +4,9 @@
 // http://clslp2.test/admin = Route::get('admin', function)
 
 //Route::get('/', function(){ return view('welcome');         } )->name('home');
-Route::get('/', function(){ return view('admin.login');         } )->name('home');
+/*Route::get('/', function(){ return view('admin.login');         } )->name('home');*/
 
-Route::get('admin', function(){ return view('admin.dashboard'); } )->name('admin');
+Route::get('/', function(){ return view('admin.dashboard'); } )->name('Home');
 Route::get('login', function(){ return view('admin.login');     } );
 Route::get('user',  function(){ return view('admin.user');      } )->name('agregar');
 Route::get('registro',  function(){ return view('admin.registro');      } );
