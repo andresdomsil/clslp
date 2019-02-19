@@ -25,16 +25,17 @@
             @endif
 
             <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+            <input type="hidden" name="id" value="{!! $equipo->id !!}">
     		<div class="form-group">
     			<label class="col-lg-2 control-label">Nombre del Equipo:</label>
     			<div class="col-lg-10">
-    				<input type="text" name="nombre" id="nombre" class="form-control" placeholder="Equipo" required />
+    				<input type="text" name="nombre" id="nombre" class="form-control" placeholder="Equipo" value="{!! $equipo->nombre !!}" required />
     			</div>
     		</div>
 
     		<div class="form-group">
     			<div class="col-lg-offset-2 col-lg-10">
-    				<button type="submit" class="btn btn-default">Guardar</button>
+    				<button type="submit" class="btn btn-default">Actualizar</button>
     				<button type=reset" class="btn btn-default">Cancelar</button>
     			</div>
     		</div>
