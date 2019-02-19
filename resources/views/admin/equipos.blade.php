@@ -35,7 +35,8 @@
     		<div class="form-group">
     			<div class="col-lg-offset-2 col-lg-10">
     				<button type="submit" class="btn btn-default">Guardar</button>
-    				<button type=reset" class="btn btn-default">Cancelar</button>
+    				<!--<button type=reset" class="btn btn-default">Cancelar</button>-->
+                    <a href="{!! action('EquiposController@index') !!}" class="btn btn-default">Cancelar</a>
     			</div>
     		</div>
     	</form>

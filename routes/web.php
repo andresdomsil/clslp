@@ -35,6 +35,23 @@ Route::post('equipo/{id?}/edit', 'EquiposController@update');
 Route::post('equipo/{id?}/delete', 'EquiposController@destroy');
 
 Route::get('estados',  function(){ return view('admin.estados');      } );
-Route::get('mercancias',  function(){ return view('admin.mercancias');      } );
+
+//Mercancias
+/*Route::get('mercancias',  function(){ return view('admin.mercancias');      } );*/
+//Lista de Mercancias
+Route::get('listmercancias', 'MercanciasController@index');
+//Formulario para agregar una nueva mercancia a la base de datos
+Route::get('mercancias', 'MercanciasController@create');
+//Agrega la mercancia a la base de Datos
+Route::post('mercancias', 'MercanciasController@store');
+//Ver solo una mercancia
+Route::get('mercancia/{id?}', 'MercanciasController@show');
+//Edición de Mercancia
+Route::get('mercancia/{id?}/edit', 'MercanciasController@edit');
+//Actulización para guardar en base de datos
+Route::post('mercancia/{id?}/edit', 'MercanciasController@update');
+//Borrado del equipo
+Route::post('mercancia/{id?}/delete', 'MercanciasController@destroy');
+
 Route::get('servicios',  function(){ return view('admin.servicios');      } );
 Route::get('calendario',  function(){ return view('admin.calendario');      } )->name('add.empresa');

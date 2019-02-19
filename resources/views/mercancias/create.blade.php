@@ -2,11 +2,11 @@
 @section('content')
 	<section class="content-header">
       <h1>
-        Equipos
+        Mercancias
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
-        <li class="active">Equipos</li>
+        <li class="active">Mercancias</li>
       </ol>
     </section>
     <br />
@@ -25,19 +25,18 @@
             @endif
 
             <input type="hidden" name="_token" value="{!! csrf_token() !!}">
-            <input type="hidden" name="id" value="{!! $equipo->id !!}">
     		<div class="form-group">
-    			<label class="col-lg-2 control-label">Nombre del Equipo:</label>
+    			<label class="col-lg-2 control-label">Nombre de la mercancia:</label>
     			<div class="col-lg-10">
-    				<input type="text" name="nombre" id="nombre" class="form-control" placeholder="Equipo" value="{!! $equipo->nombre !!}" required />
+    				<input type="text" name="nombre" id="nombre" class="form-control" placeholder="Mercancia" required />
     			</div>
     		</div>
 
     		<div class="form-group">
     			<div class="col-lg-offset-2 col-lg-10">
-    				<button type="submit" class="btn btn-default">Actualizar</button>
+    				<button type="submit" class="btn btn-default">Guardar</button>
     				<!--<button type=reset" class="btn btn-default">Cancelar</button>-->
-                    <a href="{!! action('EquiposController@index') !!}" class="btn btn-default">Cancelar</a>
+                    <a href="{!! action('MercanciasController@index') !!}" class="btn btn-default">Cancelar</a>
     			</div>
     		</div>
     	</form>
