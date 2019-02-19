@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Mercancia;
+use App\Servicio;
 
-class MercanciasController extends Controller
+class ServiciosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class MercanciasController extends Controller
      */
     public function index()
     {
-        $mercancias = Mercancia::all();
-        return view('mercancias.index', compact('mercancias'));
+        $servicios = Servicio::all();
+        return view('servicios.index', compact('servicios'));
     }
 
     /**
@@ -25,7 +25,7 @@ class MercanciasController extends Controller
      */
     public function create()
     {
-        return view('mercancias.create');
+        return view('servicios.create');
     }
 
     /**
@@ -36,13 +36,13 @@ class MercanciasController extends Controller
      */
     public function store(Request $request)
     {
-        $Mercancia = new Mercancia($arrayName = array(
+        $servicio = new servicio($arrayName = array(
             'nombre' => $request->get('nombre')
         ));
 
-        $Mercancia->save();
+        $servicio->save();
 
-        return redirect('mercancias')->with('status', 'Se agrego correctamente la Mercancia.');
+        return redirect('servicios')->with('status', 'Se agrego correctamente la servicio.');
     }
 
     /**
@@ -53,8 +53,8 @@ class MercanciasController extends Controller
      */
     public function show($id)
     {
-        $mercancia = Mercancia::find($id);
-        return view('mercancias.show', compact('mercancia'));
+        $servicio = servicio::find($id);
+        return view('servicios.show', compact('servicio'));
     }
 
     /**
@@ -65,8 +65,8 @@ class MercanciasController extends Controller
      */
     public function edit($id)
     {
-        $mercancia = Mercancia::find($id);
-        return view('mercancias.edit', compact('mercancia'));
+        $servicio = servicio::find($id);
+        return view('servicios.edit', compact('servicio'));
     }
 
     /**
@@ -78,11 +78,11 @@ class MercanciasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $mercancia = Mercancia::find($id);
-        $mercancia->nombre = $request->get('nombre');
-        $mercancia->save();
+        $servicio = servicio::find($id);
+        $servicio->nombre = $request->get('nombre');
+        $servicio->save();
 
-        return redirect(action('MercanciasController@edit', $mercancia->id))->with('status', 'La Mercancia con Id '.$id.' actualizado correctamente.');
+        return redirect(action('ServiciosController@edit', $servicio->id))->with('status', 'La servicio con Id '.$id.' actualizado correctamente.');
     }
 
     /**
@@ -93,10 +93,10 @@ class MercanciasController extends Controller
      */
     public function destroy($id)
     {
-        $mercancia = Mercancia::find($id);
-        $nombre = $mercancia->nombre;
-        $mercancia->delete();
+        $servicio = servicio::find($id);
+        $nombre = $servicio->nombre;
+        $servicio->delete();
 
-        return redirect('listmercancias')->with('status', 'El mercancia con descripci&oacute;n '.$nombre. " ha sido eliminado.");
+        return redirect('listservicios')->with('status', 'El servicio con descripci&oacute;n '.$nombre. " ha sido eliminado.");
     }
 }

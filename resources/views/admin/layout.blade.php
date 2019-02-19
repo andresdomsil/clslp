@@ -88,6 +88,7 @@
         <!-- Optionally, you can add icons to the links -->
         <li><a href="listequipos"><i class="fa fa-link"></i> <span>Equipos</span></a></li>
         <li><a href="listmercancias"><i class="fa fa-link"></i> <span>Mercancias</span></a></li>
+        <li><a href="listservicios"><i class="fa fa-link"></i> <span>Servicios</span></a></li>
 
       </ul>
       <!-- /.sidebar-menu -->

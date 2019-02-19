@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Sucursal extends Model
 {
     //referencia de modelo-tabla
-    protected $table = 'sucursals';
+    protected $table = 'sucursales';
 
     //campos asignables
     protected $fillable = [

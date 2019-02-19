@@ -32,7 +32,7 @@ Route::get('equipo/{id?}/edit', 'EquiposController@edit');
 //Actulización para guardar en base de datos
 Route::post('equipo/{id?}/edit', 'EquiposController@update');
 //Borrado del equipo
-Route::post('equipo/{id?}/delete', 'EquiposController@destroy');
+Route::get('equipo/{id?}/delete', 'EquiposController@destroy');
 
 Route::get('estados',  function(){ return view('admin.estados');      } );
 
@@ -50,8 +50,25 @@ Route::get('mercancia/{id?}', 'MercanciasController@show');
 Route::get('mercancia/{id?}/edit', 'MercanciasController@edit');
 //Actulización para guardar en base de datos
 Route::post('mercancia/{id?}/edit', 'MercanciasController@update');
-//Borrado del equipo
-Route::post('mercancia/{id?}/delete', 'MercanciasController@destroy');
+//Borrado del mercancia
+Route::get('mercancia/{id?}/delete', 'MercanciasController@destroy');
 
-Route::get('servicios',  function(){ return view('admin.servicios');      } );
+//Servicios
+/*Route::get('servicios',  function(){ return view('admin.servicios');      } );*/
+//Lista de Servicios
+Route::get('listservicios', 'ServiciosController@index');
+//Formulario para agregar una nueva servicio a la base de datos
+Route::get('servicios', 'ServiciosController@create');
+//Agrega la servicio a la base de Datos
+Route::post('servicios', 'ServiciosController@store');
+//Ver solo una servicio
+Route::get('servicio/{id?}', 'ServiciosController@show');
+//Edición de servicio
+Route::get('servicio/{id?}/edit', 'ServiciosController@edit');
+//Actulización para guardar en base de datos
+Route::post('servicio/{id?}/edit', 'ServiciosController@update');
+//Borrado del servicio
+Route::get('servicio/{id?}/delete', 'ServiciosController@destroy');
+
+
 Route::get('calendario',  function(){ return view('admin.calendario');      } )->name('add.empresa');
