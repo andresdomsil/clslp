@@ -11,7 +11,6 @@ Route::get('/', function() {
 })->name('Home');
 
 Route::get('login', function(){ return view('admin.login');     } );
-
 Route::get('user',  function(){ return view('admin.user');      } )->name('agregar');
 
 Route::get('registro',  function(){ return view('admin.registro');      } );
@@ -70,5 +69,54 @@ Route::post('servicio/{id?}/edit', 'ServiciosController@update');
 //Borrado del servicio
 Route::get('servicio/{id?}/delete', 'ServiciosController@destroy');
 
+//Sucursales
+//Lista de Sucursales
+Route::get('listsucursales', 'SucursalController@index');
+//Formulario para agregar nueva sucursal
+Route::get('sucursales', 'SucursalController@create');
+//Agrega la sucursal a la base de Datos
+Route::post('sucursales', 'SucursalController@store');
+//Ver solo un sucursal
+Route::get('sucursales/{id?}', 'SucursalController@show');
+//Edición de sucursales
+Route::get('sucursales/{id?}/edit', 'SucursalController@edit');
+//Actulización para guardar en base de datos
+Route::post('sucursales/{id?}/edit', 'SucursalController@update');
+//Borrado de la sucursal
+Route::get('sucursales/{id?}/delete', 'SucursalController@destroy');
+
+//Rutas
+//Lista de Rutas
+Route::get('listruta', 'RutaController@index');
+//Formulario para agregar nuevas rutas
+Route::get('ruta', 'RutaController@create');
+//Agrega las rutas a la base de Datos
+Route::post('ruta', 'RutaController@store');
+//Ver solo una ruta
+Route::get('ruta/{id?}', 'RutaController@show');
+//Edición de rutas
+Route::get('ruta/{id?}/edit', 'RutaController@edit');
+//Actulización para guardar en base de datos
+Route::post('ruta/{id?}/edit', 'RutaController@update');
+//Borrado de rutas
+Route::get('ruta/{id?}/delete', 'RutaController@destroy');
+
+//Estados
+//Lista de Estados
+Route::get('listestado', 'EstadoController@index');
+//Formulario para agregar nuevos estados
+Route::get('estado', 'EstadoController@create');
+//Agrega los estados a la base de Datos
+Route::post('estado', 'EstadoController@store');
+//Ver solo un estado
+Route::get('estado/{id?}', 'EstadoController@show');
+//Edición de estado
+Route::get('estado/{id?}/edit', 'EstadoController@edit');
+//Actulización para guardar en base de datos
+Route::post('estado/{id?}/edit', 'EstadoController@update');
+//Borrado de estado
+Route::get('estado/{id?}/delete', 'EstadoController@destroy');
 
 Route::get('calendario',  function(){ return view('admin.calendario');      } )->name('add.empresa');
+
+Route::get('act', function(){ return view('activities.activities_home');   } );
