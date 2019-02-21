@@ -2,7 +2,7 @@
 
 // http://clslp2.test/ = Route::get('/', function)
 // http://clslp2.test/admin = Route::get('admin', function)
-
+//Daniel
 //Route::get('/', function(){ return view('welcome');         } )->name('home');
 /*Route::get('/', function(){ return view('admin.login');         } )->name('home');*/
 
