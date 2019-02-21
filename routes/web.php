@@ -2,7 +2,7 @@
 
 // http://clslp2.test/ = Route::get('/', function)
 // http://clslp2.test/admin = Route::get('admin', function)
-//Daniel
+
 //Route::get('/', function(){ return view('welcome');         } )->name('home');
 /*Route::get('/', function(){ return view('admin.login');         } )->name('home');*/
 
@@ -11,7 +11,6 @@ Route::get('/', function() {
 })->name('Home');
 
 Route::get('login', function(){ return view('admin.login');     } );
-
 Route::get('user',  function(){ return view('admin.user');      } )->name('agregar');
 
 Route::get('registro',  function(){ return view('admin.registro');      } );
@@ -72,3 +71,5 @@ Route::get('servicio/{id?}/delete', 'ServiciosController@destroy');
 
 
 Route::get('calendario',  function(){ return view('admin.calendario');      } )->name('add.empresa');
+
+Route::get('act', function(){ return view('activities.activities_home');   } );
