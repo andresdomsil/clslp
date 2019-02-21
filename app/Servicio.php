@@ -17,4 +17,12 @@ class Servicio extends Model
     public function servicioEmpresas(){
         return $this->hasMany(ServicioEmpresa::class);
     }
+
+    public function scopeNombre($query, $name)
+    {
+    	if (trim($name) != "")
+    	{
+    		$query->where('nombre', "LIKE", "%$name%");
+    	}
+    }
 }

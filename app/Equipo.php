@@ -13,4 +13,14 @@ class Equipo extends Model
     protected $fillable = [
         'nombre'
     ];
+
+    public function scopeNombre($query, $name)
+    {
+    	//dd("scope: " . $name);
+    	if (trim($name) != "")
+    	{
+    		$query->where('nombre', "LIKE", "%$name%");
+    		//dd($query);
+    	}
+    }
 }

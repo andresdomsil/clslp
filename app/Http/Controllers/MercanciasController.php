@@ -12,9 +12,10 @@ class MercanciasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $mercancias = Mercancia::all();
+        //$mercancias = Mercancia::all();
+        $mercancias = Mercancia::nombre($request->get('search'))->paginate(15);
         return view('mercancias.index', compact('mercancias'));
     }
 

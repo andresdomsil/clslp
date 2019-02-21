@@ -52,8 +52,7 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-12">
-          <!--<button type="submit" class="btn btn-primary btn-block btn-flat">Iniciar sesión</button>-->
-          <a href="{{ route('dashboard') }}">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Iniciar sesión</button>
         </div>
         <!-- /.col -->
       </div>

@@ -13,4 +13,12 @@ class Mercancia extends Model
     protected $fillable = [
         'nombre'
     ];
+
+    public function scopeNombre($query, $name)
+    {
+    	if (trim($name) != "")
+    	{
+    		$query->where('nombre', "LIKE", "%$name%");
+    	}
+    }
 }

@@ -12,9 +12,10 @@ class ServiciosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $servicios = Servicio::all();
+        //$servicios = Servicio::all();
+        $servicios = Servicio::nombre($request->get('search'))->paginate(15);
         return view('servicios.index', compact('servicios'));
     }
 

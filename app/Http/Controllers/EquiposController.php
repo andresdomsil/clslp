@@ -13,10 +13,10 @@ class EquiposController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-        $equipos = Equipo::all();
+        //dd($request->get('search'));
+        $equipos = Equipo::nombre($request->get('search'))->paginate(15);
         return view('equipos.index', compact('equipos'));
     }
 
