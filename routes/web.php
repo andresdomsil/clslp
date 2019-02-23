@@ -119,4 +119,13 @@ Route::get('estado/{id?}/delete', 'EstadoController@destroy');
 
 Route::get('calendario',  function(){ return view('admin.calendario');      } )->name('add.empresa');
 
-Route::get('act', function(){ return view('activities.activities_home');   } );
+//Actividades
+//Seleccionar Empresa
+Route::get('/act','ActController@create');
+Route::post('/act','ActController@store');
+//Muestra Informacion de la empresa seleccionada con actividades
+Route::get('/actdash','ActController@index');
+
+//Empresas
+//Nueva Empresa
+Route::get('/nempresa','FactoryController@create');

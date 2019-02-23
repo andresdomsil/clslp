@@ -61,7 +61,7 @@
               </li>
             </ul>
           </li>
-          
+
         </ul>
       </div>
     </nav>
@@ -87,8 +87,11 @@
         <li class="header">Menu</li>
         <!-- Optionally, you can add icons to the links -->
         <li><a href="listequipos"><i class="fa fa-link"></i> <span>Equipos</span></a></li>
+        <li><a href="listestado"><i class="fa fa-link"></i> <span>Estados</span></a></li>
         <li><a href="listmercancias"><i class="fa fa-link"></i> <span>Mercancias</span></a></li>
+        <li><a href="listruta"><i class="fa fa-link"></i> <span>Rutas</span></a></li>
         <li><a href="listservicios"><i class="fa fa-link"></i> <span>Servicios</span></a></li>
+        <li><a href="listsucursales"><i class="fa fa-link"></i> <span>Sucursal</span></a></li>
 
       </ul>
       <!-- /.sidebar-menu -->

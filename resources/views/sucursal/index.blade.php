@@ -8,7 +8,14 @@
 			<div class="panel-body ">
                 <div class="form-group">
 					<div class="row">
-						<div class="col-md-8"></div>
+						<div class="col-md-8">
+                            <form class="navbar-form navbar-left pull rigth" role="search" method="get">
+                                <div class="form-group">
+                                    <input type="text" name="search" class="form-control" placeholder="Buscar sucursal" />
+                                </div>
+                                <button type="submit" class="btn btn-default">Buscar</button>
+                            </form>
+                        </div>
 							<div class="col-md-4">
 								<a ID="Nueno" class="btn btn-info" href="{!! action('SucursalController@create') !!}">
 									<span class="glyphicon glyphicon-check"></span>Nuevo
