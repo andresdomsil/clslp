@@ -24,8 +24,8 @@ class ActController extends Controller
      */
     public function create()
     {
-       $data = Empresa::all();
-       return view('factorys.factory_view',compact('data'));
+       $Empresas = Empresa::all();
+       return view('factorys.factory_view',compact('Empresas'));
     }
 
     /**
