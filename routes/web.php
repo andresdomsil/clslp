@@ -121,11 +121,11 @@ Route::get('calendario',  function(){ return view('admin.calendario');      } )-
 
 //Actividades
 //Seleccionar Empresa
-Route::get('/act','ActController@create');
-Route::post('/act','ActController@store');
+Route::get('/act','ActividadesController@create');
+Route::post('/actdash','ActividadesController@store');
 //Muestra Informacion de la empresa seleccionada con actividades
-Route::get('/actdash','ActController@index');
+Route::get('/actdash/{id?}','ActController@show');
 
 //Empresas
 //Nueva Empresa
-Route::get('/nempresa','FactoryController@create');
+Route::get('/newempresa','EmpresasControllerr@create');

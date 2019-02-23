@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class FactoryController extends Controller
+class EmpresasControllerr extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,7 +23,7 @@ class FactoryController extends Controller
      */
     public function create()
     {
-        return view('factorys.new_factory',compact('data'));
+        return view('empresas.empresas_create');
     }
 
     /**

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Empresa;
-class ActController extends Controller
+class ActividadesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class ActController extends Controller
      */
     public function index()
     {
-        return view('factorys.factory_dash');
+        
+        
     }
 
     /**
@@ -25,7 +26,7 @@ class ActController extends Controller
     public function create()
     {
        $Empresas = Empresa::all();
-       return view('factorys.factory_view',compact('Empresas'));
+       return view('empresas.factory_view',compact('Empresas'));
     }
 
     /**
@@ -36,6 +37,7 @@ class ActController extends Controller
      */
     public function store(Request $request)
     {
+     
         return redirect('/actdash');
     }
 
@@ -47,7 +49,8 @@ class ActController extends Controller
      */
     public function show($id)
     {
-        //
+        $empresa = Empresa::find($id);
+       return view('factorys.factory_dash',compact('empresa'));
     }
 
     /**
