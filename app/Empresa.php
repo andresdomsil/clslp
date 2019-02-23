@@ -6,9 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Empresa extends Model
 {
-    //referencia de modelo-tabla
-    protected $table = 'empresas';
-
+    
+    
     //campos asignables
     protected $fillable = [
         'nombre', 'direccion', 'nombre_contacto', 'telefono', 'email',
