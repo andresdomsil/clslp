@@ -129,3 +129,13 @@ Route::get('/actdash/{id?}','ActController@show');
 //Empresas
 //Nueva Empresa
 Route::get('/newempresa','EmpresasControllerr@create');
+
+//Certificaciones
+//Lista de Certificaciones
+Route::get('listcertificacion', 'CertificacionesController@index');
+Route::get('certificaciones', 'CertificacionesController@create');
+Route::post('certificaciones', 'CertificacionesController@store');
+Route::get('certificaciones/{id?}', 'CertificacionesController@show');
+Route::get('certificaciones/{id?}/edit', 'CertificacionesController@edit');
+Route::post('certificaciones/{id?}/edit', 'CertificacionesController@update');
+Route::get('certificaciones/{id?}/delete', 'CertificacionesController@destroy');
