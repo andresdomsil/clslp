@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Empresa;
 
 class EmpresasControllerr extends Controller
 {
@@ -34,8 +35,36 @@ class EmpresasControllerr extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+
+        $mex =  $request->get('immex') == 'on'?true:false;
+        $mp = $request->get('mp')=='on'?true:false;
+        $rh =  $request->get('rh')=='on'?true:false;
+        $rs = $request->get('rassat')=='on'?true:false;
+        $prio = $request->get('prio')=='on'?true:false;
+
+
+        $Empresa = new Empresa($arrayName = array(
+            'nombre' => $request->get('name'),
+            'direccion'  => $request->get('ad'),
+            'nombre_contacto' => $request->get('name_c'),
+            'telefono'  => $request->get('phone'),
+            'email'  => $request->get('emailad'),
+            'web' => $request->get('web'),
+            'cantidad_unidades' => $request->get('values'),
+            'antiguedad_unidades' => $request->get('oldvalues'),
+            'programa_immex' => $mex,
+            'material_peligros' => $mp,
+            'servicios_adicionales' => $request->get('servadi'),
+            'recursos_humano' => $rh,
+            'rastreo_satelital' => $rs,
+            'rutas_internacionales' => $request->get('rutinter'),
+            'logo' => $request->get('myfile'),
+            'prioridad' => $prio));
+        
+            $Empresa -> save();
+            return redirect('/newempresa')->with('status','test');
+
+   }
 
     /**
      * Display the specified resource.

@@ -12,7 +12,7 @@ class Empresa extends Model
     protected $fillable = [
         'nombre', 'direccion', 'nombre_contacto', 'telefono', 'email',
         'web', 'cantidad_unidades', 'antiguedad_unidades', 'programa_immex',
-        'material_peligrosos', 'servicios_adicionales', 'recursos_humano',
+        'material_peligros', 'servicios_adicionales', 'recursos_humano',
         'rastreo_satelital', 'rutas_internacionales', 'logo', 'prioridad'
     ];
 

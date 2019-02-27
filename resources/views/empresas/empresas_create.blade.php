@@ -6,10 +6,11 @@
             <div class="tab-content">
             <div class="tab-pane active" id="tab_1">
 
-
                   <div class="form-group {{ $errors->has('contacto1') ? 'has-error' : '' }}">
-                                
-                  <input type="hidden" value="{!! csrf_token() !!}" name="_token">
+
+                      <form class = "form-horizontal" method="post">          
+                 
+                       <input type="hidden" value="{!! csrf_token() !!}" name="_token">
                       <h3 class="text-center">Registrar una Empresa</h3>
                       <hr>
                                  <label>Nombre de la Empresa</label>
@@ -36,16 +37,16 @@
                                  <label>Antiguedad Unidades</label>
                                  <input  placeholder="Old Values" name="oldvalues" type="text" class="form-control">
                                  <br>
-                                 <input type="checkbox" name="immex">Programa IMMEX<br>
+                                 <input type="checkbox" name="immex" >Programa IMMEX<br>
                                   <br>
-                                 <input type="checkbox" name="mp">Materiales Peligrosos<br>
+                                 <input type="checkbox" name="mp" >Materiales Peligrosos<br>
                                  <br>
                                  <label>Servicios Adicionales</label>
                                  <input  placeholder="Adittional Services" name="servadi" type="text" class="form-control">
                                  <br>
-                                 <input type="checkbox" name="rh">Recursos Humanos<br>
+                                 <input type="checkbox" name="rh" >Recursos Humanos<br>
                                  <br>
-                                 <input type="checkbox" name="rassat">Rastreo Satelital<br>
+                                 <input type="checkbox" name="rassat" >Rastreo Satelital<br>
                                  <br>
                                  <label>Rutas Internacionales</label>
                                  <input  placeholder="International Routes" name="rutinter" type="text" class="form-control">
@@ -54,15 +55,15 @@
                                  <br><label>Logo</label>
                                 <input id="fileupload" name="myfile" type="file" />
                                 <br>
-                                <input type="submit" value="Cargar" id="submit" />
-                                
+                                 
                                 <br>
                                 <div class="form-group col-md-6 col-md-offset-3">
                           <button type="submit" class="btn btn-success btn-block">Agregar
                       </button>
+                     </form>
 
-                     </div>
-
+                 </div>
+</form>
 
 
             </div>
