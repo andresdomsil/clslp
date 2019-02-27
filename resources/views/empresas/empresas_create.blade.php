@@ -20,7 +20,7 @@
                                  <input  placeholder="Address" name="ad" type="text" class="form-control">
 
                                  <label >Nombre del Contacto</label>
-                                 <input  placeholder="Name of principal contact" name="name_c" type="text" class="form-control">
+                                 <input  placeholder="Name of the principal contact" name="name_c" type="text" class="form-control">
 
                                  <label >Telefono</label>
                                  <input  placeholder="Phone"  name="phone" type="tel" class="form-control">

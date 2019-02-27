@@ -130,6 +130,7 @@ Route::get('/actdash/{id?}','ActController@show');
 //Nueva Empresa
 Route::get('/newempresa','EmpresasControllerr@create');
 Route::post('/newempresa','EmpresasControllerr@store');
+Route::get('/empresas','EmpresasControllerr@index');
 
 //Certificaciones
 //Lista de Certificaciones
