@@ -19,7 +19,7 @@
 <tbody>
 @foreach($empresas as $empresa)
 <tr>
-<td>{!! $empresa -> name !!}</td>
+<td>{!! $empresa -> nombre !!}</td>
 <td>{!! $empresa -> direccion !!}</td>
 <td>{!! $empresa -> nombre_contacto !!}</td>
 <td>{!! $empresa -> telefono !!}</td>
