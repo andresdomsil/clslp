@@ -14,7 +14,6 @@ class EmpresasControllerr extends Controller
      */
     public function index()
     {
-
         $empresas = Empresa::all();
         return view('empresas.index',compact('empresas'));
     }
@@ -64,7 +63,7 @@ class EmpresasControllerr extends Controller
             'prioridad' => $prio));
         
             $Empresa -> save();
-            return redirect('/newempresa')->with('status','test');
+            return redirect('/');
 
    }
 
@@ -76,7 +75,8 @@ class EmpresasControllerr extends Controller
      */
     public function show($id)
     {
-        //
+        $empresa = Empresa::find($id);
+        return view('empresas.show',compact('empresa'));
     }
 
     /**
