@@ -12,19 +12,20 @@
                       <h3 class="text-center">Bienvenido</h3>
                       <hr>
                       <div class="form-group {{ $errors->has('estado_id') ? 'has-error' : '' }}">
+                               
+                               <label for="">Empresas</label>
                                 <select class="form-control select2" name="factorys_S" style="width: 100%;">
-                                    <option value="">Seleccione una Empresa</option>
-                                    
-                                 
-
+                                   <option value="">--- Escoja una Empresa ----</option>
+                                    @foreach($Empresas as $Empresa)
+                                    <option value="{{ $Empresa['id']}}">{{$Empresa['nombre']}}</option>
+                                    @endforeach
                                 </select>      
                             </div>
                     </div>
                     <hr>
                     <hr>
-                      
                       <div class="form-group col-md-6 col-md-offset-3">
-                          <button type="submit" class="btn btn-success btn-block">Continuar
+                          <button type="submit"  class="btn btn-success btn-block">Continuar
                       </button>
                       </div>
                     </div>

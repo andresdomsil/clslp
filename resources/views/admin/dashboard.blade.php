@@ -112,6 +112,8 @@
         </div>
         <!-- /.col -->
       </div>
+      <button class="btn btn-sm btn-icon btn-pure btn-success" onclick="window.location='{{ route("nueva") }}'" class="btn btn-default">Nueva Empresa<i class="fa fa-pencil" aria-hidden="true" ></i></button>
+                  
       <!-- /.row -->
     </section>
 @stop
