@@ -10,10 +10,14 @@
 <table class="table">
 <thead>
 <tr>
+
 <th>Nombre</th>
 <th>Dirección</th>
-<th>Nombre del Contacto</th>
+<th>Contacto</th>
 <th>Telefono</th>
+<th>Correo</th>
+<th>WEB</th>
+<th>Acciones</th>
 </tr>
 </thead>
 <tbody>
@@ -23,6 +27,13 @@
 <td>{!! $empresa -> direccion !!}</td>
 <td>{!! $empresa -> nombre_contacto !!}</td>
 <td>{!! $empresa -> telefono !!}</td>
+<td>{!! $empresa -> email !!}</td>
+<td>{!! $empresa -> web !!}</td>
+<td class="actions">
+                    
+                    <button class="btn btn-sm btn-icon btn-pure btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                    <button class="btn btn-sm btn-icon btn-pure btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                  </td>
 </tr>
 @endforeach
 </tbody>

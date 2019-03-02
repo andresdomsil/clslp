@@ -6,9 +6,7 @@
 //Route::get('/', function(){ return view('welcome');         } )->name('home');
 /*Route::get('/', function(){ return view('admin.login');         } )->name('home');*/
 
-Route::get('/', function() { 
-	return view('admin.dashboard'); 
-})->name('Home');
+Route::get('/', 'EmpresasControllerr@index') ->name('Home');
 
 Route::get('login', function(){ return view('admin.login');     } );
 Route::get('user',  function(){ return view('admin.user');      } )->name('agregar');
@@ -133,7 +131,7 @@ Route::post('/newempresa','EmpresasControllerr@store');
 //Lista de Empresas
 Route::get('/empresas','EmpresasControllerr@index');
 //Ver una sola empresa
-Route::get('/empresas/{id?}','EmpresasControllerr@show');
+Route::get('/empresas/{id?}','EmpresasControllerr@show')-> name('test');
 
 
 //Certificaciones
