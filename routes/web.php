@@ -128,11 +128,9 @@ Route::get('/actdash/{id?}','ActController@show');
 //Formulario Nueva Empresa
 Route::get('/newempresa','EmpresasControllerr@create') -> name('nueva');
 Route::post('/newempresa','EmpresasControllerr@store');
-//Lista de Empresas
-Route::get('/empresas','EmpresasControllerr@index');
 //Ver una sola empresa
 Route::get('/empresas/{id?}','EmpresasControllerr@show')-> name('test');
-
+Route::post('/empresas/{id?}/delete','EmpresasControllerr@destroy');
 
 //Certificaciones
 //Lista de Certificaciones

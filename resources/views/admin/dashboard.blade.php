@@ -32,8 +32,18 @@
 <td>{!! $empresa -> email !!}</td>
 <td>{!! $empresa -> web !!}</td>
 <td class="actions">
-                    <button class="btn btn-sm btn-icon btn-pure btn-success" onclick="{!! action('EmpresasControllerr@show',$empresa->id) !!}"><i class="fa fa-pencil" aria-hidden="true" ></i></button>
-                    <button class="btn btn-sm btn-icon btn-pure btn-danger"  onclick="{!! action('EmpresasControllerr@show',$empresa->id) !!}"><i class="fa fa-trash" aria-hidden="true" ></i></button>
+                   <button class="btn btn-sm btn-icon btn-pure btn-success" onclick="{!! action('EmpresasControllerr@show',$empresa->id) !!}"><i class="fa fa-pencil" aria-hidden="true" ></i></button>
+                   
+                   
+                    <form method="post" action="{!! action('EmpresasControllerr@destroy',$empresa->id) !!}"
+                    class="pull-left">
+                    <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+                    <div>
+                    <button type="submit"  class="btn btn-sm btn-icon btn-pure btn-danger"  class="btn btn-warning"><i class="fa fa-trash" aria-hidden="true" ></i></button>
+                    </div>
+                    </form>
+                  
+                  
                   </td>
 </tr>
 @endforeach

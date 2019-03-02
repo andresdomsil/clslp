@@ -110,6 +110,9 @@ class EmpresasControllerr extends Controller
      */
     public function destroy($id)
     {
-        //
+       $empresa = Empresa::find($id);
+       $empresa->delete();
+       
+       return redirect('/');
     }
 }
