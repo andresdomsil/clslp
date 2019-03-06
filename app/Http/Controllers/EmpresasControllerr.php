@@ -15,7 +15,7 @@ class EmpresasControllerr extends Controller
     public function index()
     {
         $empresas = Empresa::all();
-        return view('empresas.index',compact('empresas'));
+        return view('admin.dashboard',compact('empresas'));
     }
 
     /**
@@ -110,6 +110,9 @@ class EmpresasControllerr extends Controller
      */
     public function destroy($id)
     {
-        //
+       $empresa = Empresa::find($id);
+       $empresa->delete();
+       
+       return redirect('/');
     }
 }
