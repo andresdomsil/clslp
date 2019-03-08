@@ -100,7 +100,35 @@ class EmpresasControllerr extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $empresa = Empresa::find($id);
+
+        $mex =  $request->get('immex') == 'on'?true:false;
+        $mp = $request->get('mp')=='on'?true:false;
+        $rh =  $request->get('rh')=='on'?true:false;
+        $rs = $request->get('rassat')=='on'?true:false;
+        $prio = $request->get('prio')=='on'?true:false;
+
+
+            $empresa -> nombre = $request->get('name');
+            $empresa -> direccion = $request->get('ad');
+            $empresa -> nombre_contacto = $request->get('name_c');
+            $empresa -> telefono  = $request->get('phone');
+            $empresa -> email  = $request->get('emailad');
+            $empresa -> web = $request->get('web');
+            $empresa -> cantidad_unidades = $request->get('values');
+            $empresa -> antiguedad_unidades = $request->get('oldvalues');
+            $empresa -> programa_immex = $mex;
+            $empresa -> material_peligros = $mp;
+            $empresa -> servicios_adicionales = $request->get('servadi');
+            $empresa -> recursos_humano = $rh;
+            $empresa -> rastreo_satelital = $rs;
+            $empresa -> rutas_internacionales = $request->get('rutinter');
+            $empresa -> logo = $request->get('myfile');
+            $empresa -> prioridad = $prio;
+        
+            $empresa -> save();
+            return redirect('/');
+        
     }
 
     /**
