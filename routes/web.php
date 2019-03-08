@@ -132,7 +132,8 @@ Route::get('/newempresa','EmpresasControllerr@create') -> name('nueva');
 Route::post('/newempresa','EmpresasControllerr@store');
 Route::get('/empresas/{id?}','EmpresasControllerr@show')-> name('test');
 Route::post('/empresas/{id?}/delete','EmpresasControllerr@destroy');
-Route::post('/empresas/{id?}/edit','EmpresasControllerr@edit');
+Route::get('/empresas/{id?}/edit','EmpresasControllerr@edit');
+Route::post('/empresas/{id?}/edit','EmpresasControllerr@update');
 
 //Certificaciones
 //Lista de Certificaciones

@@ -41,7 +41,7 @@
                     </div>
                     </form>
                   
-                    <form method="post" action="{!! action('EmpresasControllerr@edit',$empresa->id) !!}"
+                    <form method="get" action="{!! action('EmpresasControllerr@edit',$empresa->id) !!}"
                     class="pull-left">
                     <input type="hidden" name="_token" value="{!! csrf_token() !!}">
                     <div>
