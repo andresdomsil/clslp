@@ -119,10 +119,13 @@ Route::get('calendario',  function(){ return view('admin.calendario');      } )-
 
 //Actividades
 //Seleccionar Empresa
-Route::get('/act','ActividadesController@create');
-Route::post('/actdash','ActividadesController@store');
-//Muestra Informacion de la empresa seleccionada con actividades
-Route::get('/actdash/{id?}','ActController@show');
+Route::get('listactividades', 'ActividadesController@index');
+Route::get('Actividades', 'ActividadesController@create');
+Route::post('Actividades', 'ActividadesController@store');
+Route::get('Actividades/{id?}', 'ActividadesController@show');
+Route::get('Actividades/{id?}/edit', 'ActividadesController@edit');
+Route::post('Actividades/{id?}/edit', 'ActividadesController@update');
+Route::get('Actividades/{id?}/delete', 'ActividadesController@destroy');
 
 //Empresas
 Route::get('/newempresa','EmpresasControllerr@create') -> name('nueva');

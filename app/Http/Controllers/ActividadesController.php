@@ -14,8 +14,8 @@ class ActividadesController extends Controller
      */
     public function index()
     {
-        
-        
+
+
     }
 
     /**
@@ -25,8 +25,8 @@ class ActividadesController extends Controller
      */
     public function create()
     {
-       $Empresas = Empresa::all();
-       return view('empresas.factory_view',compact('Empresas'));
+       $Actividaes = Acttividades::all();
+       return view('Actividades.factory_view',compact('Actividades'));
     }
 
     /**
@@ -37,7 +37,7 @@ class ActividadesController extends Controller
      */
     public function store(Request $request)
     {
-     
+
         return redirect('/actdash');
     }
 
@@ -49,8 +49,8 @@ class ActividadesController extends Controller
      */
     public function show($id)
     {
-        $empresa = Empresa::find($id);
-       return view('factorys.factory_dash',compact('empresa'));
+        $Actividades = Actividades::find($id);
+       return view('factorys.factory_dash',compact('Actividades'));
     }
 
     /**
