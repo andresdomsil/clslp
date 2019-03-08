@@ -42,7 +42,7 @@
                                  <input type="checkbox" name="mp"  {!! $empresa->material_peligros == 1?"checked":""!!} >Materiales Peligrosos<br>
                                  <br>
                                  <label>Servicios Adicionales</label>
-                                 <input  placeholder="Adittional Services" name="servadi" type="text" class="form-control"  {!! $empresa->servicios_adicionales == 1?"checked":""!!}>
+                                 <input  placeholder="Adittional Services" name="servadi" value="{!! $empresa->servicios_adicionales!!}" type="text" class="form-control">
                                  <br>
                                  <input type="checkbox" name="rh"  {!! $empresa->recursos_humano == 1?"checked":""!!}>Recursos Humanos<br>
                                  <br>
