@@ -21,7 +21,7 @@
 <tbody>
 @foreach($act as $ActividadEmpresa)
 <tr>
-<td>{!! ActividadEmpresa -> actividad_id !!}</td>
+<td>{!! $ActividadEmpresa -> actividad_id !!}</td>
 
 @endforeach
 </tbody>
