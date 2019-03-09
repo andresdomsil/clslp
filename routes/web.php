@@ -144,3 +144,9 @@ Route::get('certificaciones/{id?}', 'CertificacionesController@show');
 Route::get('certificaciones/{id?}/edit', 'CertificacionesController@edit');
 Route::post('certificaciones/{id?}/edit', 'CertificacionesController@update');
 Route::get('certificaciones/{id?}/delete', 'CertificacionesController@destroy');
+
+
+//Actividades Empresas
+Route::get('/ActividadesEmpresas','ActividadesEmpresasController@create') -> name('ActividadesEmpresasDash');
+Route::post('/ActividadesEmpresas/{id?}','ActividadesEmpresasController@store')->name('ActividadesEmpresas');
+

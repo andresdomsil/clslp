@@ -16,7 +16,7 @@
                                <label for="">Empresas</label>
                                 <select class="form-control select2" name="factorys_S" style="width: 100%;">
                                    <option value="">--- Escoja una Empresa ----</option>
-                                    @foreach($Empresas as $Empresa)
+                                    @foreach($data as $Empresa)
                                     <option value="{{ $Empresa['id']}}">{{$Empresa['nombre']}}</option>
                                     @endforeach
                                 </select>      
@@ -25,7 +25,7 @@
                     <hr>
                     <hr>
                       <div class="form-group col-md-6 col-md-offset-3">
-                          <button type="submit"  class="btn btn-success btn-block">Continuar
+                          <button type="submit"  class="btn btn-success btn-block" onclick="window.location='{{ route("ActividadesEmpresas") }}'">Continuar
                       </button>
                       </div>
                     </div>
