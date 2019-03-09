@@ -150,3 +150,11 @@ Route::get('certificaciones/{id?}/delete', 'CertificacionesController@destroy');
 Route::get('/ActividadesEmpresas','ActividadesEmpresasController@create') -> name('ActividadesEmpresasDash');
 Route::post('/ActividadesEmpresas/{id?}','ActividadesEmpresasController@store')->name('ActividadesEmpresas');
 
+//Certificaciones Empresas
+Route::get('/CertificacionesEmpresas','CertificacionesEmpresasController@create') -> name('CertificacionesEmpresasDash');
+Route::post('/CertificacionesEmpresas/{id?}','CertificacionesEmpresasController@store')->name('CertificacionesEmpresas');
+
+//Certificaciones Empresas
+Route::get('/EquipoEmpresas','EquiposEmpresasController@create') -> name('EquipoEmpresasDash');
+Route::post('/EquipoEmpresas/{id?}','EquiposEmpresasController@store')->name('EquipoEmpresas');
+

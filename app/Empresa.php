@@ -41,6 +41,6 @@ class Empresa extends Model
     }
 
     public function actividadEmpresas(){
-        return $this->hasMany(ActividadEmpresa::class);
+        return $this->hasMany (ActividadEmpresa::class);
     }
 }

@@ -1,16 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\Empresa;
-use Illuminate\Support\Facades\DB;
 use App\Actividad;
 use App\ActividadEmpresa;
+use Illuminate\Http\Request;
 
-class ActividadesEmpresasController extends Controller
+class EquiposEmpresasController extends Controller
 {
-    /**
+       /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -28,7 +26,7 @@ class ActividadesEmpresasController extends Controller
     public function create()
     {
         $data = Empresa::all();
-        return view('actividadesempresas.create',compact('data'));
+        return view('equiposempresas.create',compact('data'));
     }
 
     /**
@@ -46,7 +44,7 @@ class ActividadesEmpresasController extends Controller
 
         $act = $empresa->actividadEmpresas();
 
-        return view('actividadesempresas.show',compact('empresa'),compact('act'));
+        return view('equiposempresas.show',compact('empresa'),compact('act'));
     }
 
     /**

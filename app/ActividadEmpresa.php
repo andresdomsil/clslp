@@ -11,7 +11,7 @@ class ActividadEmpresa extends Model
 
     //campos asignables
     protected $fillable = [
-        'actividad_id', 'empresas_id'
+        'tipos_actividad_id', 'empresas_id'
     ];
 
     public function empresa(){
