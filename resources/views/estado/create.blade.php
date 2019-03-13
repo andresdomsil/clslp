@@ -28,7 +28,7 @@
     		<div class="form-group">
     			<label class="col-lg-2 control-label">Nombre del Estado: </label>:</label>
     			<div class="col-lg-10">
-    				<input type="text" name="nombre" id="nombre" class="form-control" placeholder="estado" required />
+    				<input type="text" name="nombre" id="nombre" class="form-control" placeholder="Estado" required />
     			</div>
     		</div>
 

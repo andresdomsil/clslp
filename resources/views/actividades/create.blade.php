@@ -28,7 +28,7 @@
     		<div class="form-group">
     			<label class="col-lg-2 control-label">Actividad:</label>
     			<div class="col-lg-10">
-    				<input type="text" name="nombre" id="nombre" class="form-control" placeholder="Mercancia" required />
+    				<input type="text" name="nombre" id="nombre" class="form-control" placeholder="Actividad" required />
     			</div>
     		</div>
 

@@ -7,7 +7,7 @@
 				<p><strong>Ultima Actualizaci&oacute;n</strong>: {!! $certificacion->updated_at !!}</p>
 			</div>
 			<a href="{!! action('CertificacionesController@edit', $certificacion->id) !!}" class="btn btn-info">Editar</a>
-			<a herf="{!! action('CertificacionesController@destroy', $certificacion->id) !!}" class="btn btn-default">Borrar</a>
+			<a href="{!! action('CertificacionesController@destroy', $certificacion->id) !!}" class="btn btn-default">Borrar</a>
 		</div>
 	</div>
 @stop

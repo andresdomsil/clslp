@@ -3,7 +3,7 @@
 	<div class="container col-md-8 col-md-offset-2">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h2>Estado</h2>
+				<h2>Estados</h2>
 			</div>
 			<div class="panel-body ">
                 <div class="form-group">
@@ -11,7 +11,7 @@
                         <div class="col-md-8">
                             <form class="navbar-form navbar-left pull rigth" role="search" method="get">
                                 <div class="form-group">
-                                    <input type="text" name="search" class="form-control" placeholder="Buscar Estados" />
+                                    <input type="text" name="search" class="form-control" placeholder="Buscar estados" />
                                 </div>
                                 <button type="submit" class="btn btn-default">Buscar</button>
                             </form>
@@ -38,7 +38,7 @@
 						<thead>
 							<tr>
 								<th>ID</th>
-								<td>ESTADO</td>
+								<td>Estado</td>
 								<td>Ultima actualizaci&oacute;n</td>
 							</tr>
 						</thead>

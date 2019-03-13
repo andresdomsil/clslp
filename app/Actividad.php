@@ -14,6 +14,14 @@ class Actividad extends Model
         'nombre'
     ];
 
+    public function scopeNombre($query, $name)
+    {
+    	if (trim($name) != "")
+    	{
+    		$query->where('nombre', "LIKE", "%$name%");
+    	}
+    }
+    
     public function actividadEmpresas(){
         return $this->hasMany(ActividadEmpresas::class);
     }

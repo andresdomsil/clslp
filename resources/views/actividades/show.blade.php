@@ -3,11 +3,11 @@
 	<div class="container col-md-8 col-md-offset-2">
 		<div class="well well bs-component">
 			<div class="content">
-				<h2 class="header">{!! $Actividades->nombre !!}</h2>
-				<p><strong>Ultima Actualizaci&oacute;n</strong>: {!! $Actividades->updated_at !!}</p>
+				<h2 class="header">{!! $actividades->nombre !!}</h2>
+				<p><strong>Ultima Actualizaci&oacute;n</strong>: {!! $actividades->updated_at !!}</p>
 			</div>
-			<a href="{!! action('ActividadesController@edit', $Actividades->id) !!}" class="btn btn-info">Editar</a>
-			<a herf="{!! action('ActividadesController@destroy', $Actividades->id) !!}" class="btn btn-default">Borrar</a>
+			<a href="{!! action('ActividadesController@edit', $actividades->id) !!}" class="btn btn-info">Editar</a>
+			<a href="{!! action('ActividadesController@destroy', $actividades->id) !!}" class="btn btn-default">Borrar</a>
 		</div>
 	</div>
 @stop

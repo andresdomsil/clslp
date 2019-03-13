@@ -5,11 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Panel de Administración</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" href="css/AdminLTE.min.css">
-  <link rel="stylesheet" href="css/skins/skin-blue.min.css">
+  <link rel="stylesheet" href="{{ asset('assets/css/AdminLTE.min.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/css/skins/skin-blue.min.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -27,41 +28,29 @@
     </a>
 
     <!-- Header Navbar -->
-    <nav class="navbar navbar-static-top" role="navigation">
+    <nav class="navbar navbar-default" role="navigation">
       <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
-      </a>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- User Account Menu -->
-          <li class="dropdown user user-menu">
-            <!-- Menu Toggle Button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <!-- The user image in the navbar-->
-              <img src="img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Usuario Admin</span>
-            </a>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <!-- The user image in the menu -->
-              <li class="user-header">
-                <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                <p>
-                  Usuario Admin
-                </p>
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Cerrar sesión</a>
+              <li>
+                <div>
+                  <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Logout') }}  </a>
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;"> @csrf </form>
                 </div>
               </li>
             </ul>
           </li>
-
         </ul>
       </div>
     </nav>
@@ -85,15 +74,15 @@
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
         <li class="header">Menu</li>
+        <li class="active"><a href="listactividades"><i class="fa fa-link"></i> <span>Empresas</span></a></li>
+        <hr/>
         <!-- Optionally, you can add icons to the links -->
-        <li><a href="listcertificacion"><i class="fa fa-link"></i> <span>Certificaciones</span></a></li>
+        <li><a href="listactividades"><i class="fa fa-link"></i> <span>Actividades</span></a></li>
+        <li><a href="listcertificaciones"><i class="fa fa-link"></i> <span>Certificaciones</span></a></li>
         <li><a href="listequipos"><i class="fa fa-link"></i> <span>Equipos</span></a></li>
         <li><a href="listestado"><i class="fa fa-link"></i> <span>Estados</span></a></li>
         <li><a href="listmercancias"><i class="fa fa-link"></i> <span>Mercancias</span></a></li>
-        <li><a href="listruta"><i class="fa fa-link"></i> <span>Rutas</span></a></li>
         <li><a href="listservicios"><i class="fa fa-link"></i> <span>Servicios</span></a></li>
-        <li><a href="listsucursales"><i class="fa fa-link"></i> <span>Sucursal</span></a></li>
-
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -138,11 +127,11 @@
 <!-- REQUIRED JS SCRIPTS -->
 
 <!-- jQuery 2.2.3 -->
-<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="{{ asset('assets/plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
 <!-- Bootstrap 3.3.6 -->
-<script src="js/bootstrap.min.js"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="js/app.min.js"></script>
+<script src="{{ asset('assets/js/app.min.js') }}"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the

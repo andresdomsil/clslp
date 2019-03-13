@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Estado;
+use App\Certificacion;
 
-class EstadoController extends Controller
+class CertificacionesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class EstadoController extends Controller
      */
     public function index(Request $request)
     {
-        $estado = Estado::nombre($request->get('search'))->paginate(15);
-        return view('estado.index', compact('estado'));
+        $certificaciones = Certificacion::nombre($request->get('search'))->paginate(15);
+        return view('certificaciones.index', compact('certificaciones'));
     }
 
     /**
@@ -25,7 +25,7 @@ class EstadoController extends Controller
      */
     public function create()
     {
-        return view('estado.create');
+        return view('certificaciones.create');
     }
 
     /**
@@ -36,13 +36,13 @@ class EstadoController extends Controller
      */
     public function store(Request $request)
     {
-        $estado = new estado($arrayName = array(
+        $certificacion = new Certificacion($arrayName = array(
             'nombre' => $request->get('nombre')
         ));
 
-        $estado->save();
+        $certificacion->save();
 
-        return redirect('estado')->with('status', 'Se agrego correctamente el estados.');
+        return redirect('certificaciones')->with('status', 'Se agrego correctamente la certificación.');
     }
 
     /**
@@ -53,8 +53,8 @@ class EstadoController extends Controller
      */
     public function show($id)
     {
-        $estado = estado::find($id);
-        return view('estado.show', compact('estado'));
+        $certificacion = Certificacion::find($id);
+        return view('certificaciones.show', compact('certificacion'));
     }
 
     /**
@@ -65,8 +65,8 @@ class EstadoController extends Controller
      */
     public function edit($id)
     {
-        $estado = estado::find($id);
-        return view('estado.edit', compact('estado'));
+        $certificacion = Certificacion::find($id);
+        return view('certificaciones.edit', compact('certificacion'));
     }
 
     /**
@@ -78,11 +78,11 @@ class EstadoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $estado = estado::find($id);
-        $estado->nombre = $request->get('nombre');
-        $estado->save();
+        $Certificacion = Certificacion::find($id);
+        $Certificacion->nombre = $request->get('nombre');
+        $Certificacion->save();
 
-        return redirect(action('EstadoController@edit', $estado->id))->with('status', 'El estado con Id '.$id.' actualizado correctamente.');
+        return redirect(action('CertificacionesController@edit', $Certificacion->id))->with('status', 'La certificación con Id '.$id.' actualizado correctamente.');
     }
 
     /**
@@ -93,10 +93,10 @@ class EstadoController extends Controller
      */
     public function destroy($id)
     {
-        $estado = estado::find($id);
-        $estado = $estado->nombre;
-        $estado->delete();
+        $Certificacion = Certificacion::find($id);
+        $nombre = $Certificacion->nombre;
+        $Certificacion->delete();
 
-        return redirect('listsestado')->with('status', 'El estado con descripci&oacute;n '.$nombre. " ha sido eliminado.");
+        return redirect('listcertificaciones')->with('status', 'La Certificación con descripción '.$nombre. " ha sido eliminado.");
     }
 }

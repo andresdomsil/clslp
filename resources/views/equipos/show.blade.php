@@ -7,7 +7,7 @@
 				<p><strong>Ultima Actualizaci&oacute;n</strong>: {!! $equipo->updated_at !!}</p>
 			</div>
 			<a href="{!! action('EquiposController@edit', $equipo->id) !!}" class="btn btn-info">Editar</a>
-			<a herf="{!! action('EquiposController@destroy', $equipo->id) !!}" class="btn btn-default">Borrar</a>
+			<a href="{!! action('EquiposController@destroy', $equipo->id) !!}" class="btn btn-default">Borrar</a>
 		</div>
 	</div>
 @stop

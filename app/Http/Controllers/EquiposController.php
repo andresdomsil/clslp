@@ -28,7 +28,7 @@ class EquiposController extends Controller
     public function create()
     {
         //
-        return view('admin.equipos');
+        return view('equipos.create');
     }
 
     /**

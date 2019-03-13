@@ -11,7 +11,7 @@
 						<div class="col-md-6">
                  			<form class="navbar-form navbar-left pull rigth" role="search" method="get">
                  				<div class="form-group">
-                 					<input type="text" name="search" class="form-control" placeholder="Buscar mercacnias" />
+                 					<input type="text" name="search" class="form-control" placeholder="Buscar actividades" />
                  				</div>
                  				<button type="submit" class="btn btn-default">Buscar</button>
                  			</form>
@@ -31,7 +31,7 @@
                 	</div>
             	@endif
 
-				@if ($Actividades->isEmpty())
+				@if ($actividades->isEmpty())
 					<p>No hay registros.</p>
 				@else
 					<table class="table table-hover table-striped">
@@ -43,19 +43,19 @@
 							</tr>
 						</thead>
 						<tbody>
-							@foreach($Actividades as $Actividades)
+							@foreach($actividades as $actividad)
 								<tr>
-									<td>{!! $Actividades->id !!}</td>
+									<td>{!! $actividad->id !!}</td>
 									<td>
-										<a href="{!! action('ActividadesController@show', $Actividades->id) !!}">{!! $Actividades->nombre !!}</a>
+										<a href="{!! action('ActividadesController@show', $actividad->id) !!}">{!! $actividad->nombre !!}</a>
 									</td>
-									<td>{!! $Actividades->updated_at !!}</td>
+									<td>{!! $actividad->updated_at !!}</td>
 								</tr>
 							@endforeach
 						</tbody>
 					</table>
 				@endif
-				{!! $Actividades->render() !!}
+				{!! $actividades->render() !!}
 			</div>
 		</div>
 	</div>

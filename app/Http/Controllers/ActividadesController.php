@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Empresa;
+use App\Actividad;
+
 class ActividadesController extends Controller
 {
     /**
@@ -12,10 +12,10 @@ class ActividadesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-
-
+        $actividades = Actividad::nombre($request->get('search'))->paginate(15);
+        return view('actividades.index', compact('actividades'));
     }
 
     /**
@@ -25,8 +25,7 @@ class ActividadesController extends Controller
      */
     public function create()
     {
-       $Actividaes = Acttividades::all();
-       return view('Actividades.factory_view',compact('Actividades'));
+       return view('actividades.create');
     }
 
     /**
@@ -38,7 +37,13 @@ class ActividadesController extends Controller
     public function store(Request $request)
     {
 
-        return redirect('/actdash');
+        $actividades = new Actividad($arrayName = array(
+            'nombre' => $request->get('nombre')
+        ));
+
+        $actividades->save();
+
+        return redirect('Actividades')->with('status', 'Se agrego correctamente la actividad.');
     }
 
     /**
@@ -49,8 +54,8 @@ class ActividadesController extends Controller
      */
     public function show($id)
     {
-        $Actividades = Actividades::find($id);
-       return view('factorys.factory_dash',compact('Actividades'));
+        $actividades = Actividad::find($id);
+        return view('actividades.show', compact('actividades'));
     }
 
     /**
@@ -61,7 +66,8 @@ class ActividadesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $actividades = Actividad::find($id);
+        return view('actividades.edit', compact('actividades'));
     }
 
     /**
@@ -73,7 +79,11 @@ class ActividadesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $actividades = Actividad::find($id);
+        $actividades->nombre = $request->get('nombre');
+        $actividades->save();
+
+        return redirect(action('ActividadesController@edit', $actividades->id))->with('status', 'La actividad con Id '.$id.' actualizado correctamente.');
     }
 
     /**
@@ -84,6 +94,10 @@ class ActividadesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $actividades = Actividad::find($id);
+        $nombre = $actividades->nombre;
+        $actividades->delete();
+
+        return redirect('listactividades')->with('status', 'La actividad con descripción '.$nombre. " ha sido eliminado.");
     }
 }

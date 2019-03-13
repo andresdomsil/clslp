@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Empresa;
 
 class HomeController extends Controller
 {
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -21,8 +22,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('home');
+        $empresas = Empresa::nombre($request->get('search'))->paginate(20);
+        return view('welcome', compact('empresas'));
     }
 }

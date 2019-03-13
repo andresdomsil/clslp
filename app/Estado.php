@@ -14,6 +14,14 @@ class Estado extends Model
         'nombre'
     ];
 
+    public function scopeNombre($query, $name)
+    {
+        if (trim($name) != "")
+        {
+            $query->where('nombre', "LIKE", "%$name%");
+        }
+    }
+
     public function sucursales(){
         return $this->hasMany(Sucursal::class);
     }

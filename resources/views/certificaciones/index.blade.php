@@ -11,7 +11,7 @@
 						<div class="col-md-6">
                  			<form class="navbar-form navbar-left pull rigth" role="search" method="get">
                  				<div class="form-group">
-                 					<input type="text" name="search" class="form-control" placeholder="Buscar servicios" />
+                 					<input type="text" name="search" class="form-control" placeholder="Buscar certificación" />
                  				</div>
                  				<button type="submit" class="btn btn-default">Buscar</button>
                  			</form>
@@ -31,14 +31,14 @@
                 	</div>
             	@endif
 
-				@if ($certificacion->isEmpty())
+				@if ($certificaciones->isEmpty())
 					<p>No hay registros.</p>
 				@else 
 					<table class="table table-hover table-striped">
 						<thead>
 							<tr>
 								<th>ID</th>
-								<td>Certificacion</td>
+								<td>Certificaci&oacute;n</td>
 								<td>Ultima actualizaci&oacute;n</td>
 							</tr>
 						</thead>
@@ -55,7 +55,7 @@
 						</tbody>
 					</table>
 				@endif
-				{!! $certificacion->render() !!}
+				{!! $certificaciones->render() !!}
 			</div>
 		</div>
 	</div>

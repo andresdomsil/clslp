@@ -7,7 +7,7 @@
 				<p><strong>Ultima Actualizaci&oacute;n</strong>: {!! $estado->updated_at !!}</p>
 			</div>
 			<a href="{!! action('EstadoController@edit', $estado->id) !!}" class="btn btn-info">Editar</a>
-			<a herf="{!! action('EstadoController@destroy', $estado->id) !!}" class="btn btn-default">Borrar</a>
+			<a href="{!! action('EstadoController@destroy', $estado->id) !!}" class="btn btn-default">Borrar</a>
 		</div>
 	</div>
 @stop

@@ -1,22 +1,12 @@
 <?php
 
-// http://clslp2.test/ = Route::get('/', function)
-// http://clslp2.test/admin = Route::get('admin', function)
+//Home
+Route::get('/', 'HomeController@index');
+Route::get('/home', 'EmpresasController@index');
+//Login, registro, etc...
+Auth::routes();
 
-//Route::get('/', function(){ return view('welcome');         } )->name('home');
-/*Route::get('/', function(){ return view('admin.login');         } )->name('home');*/
-
-Route::get('/', 'EmpresasControllerr@index') ->name('Home');
-
-Route::get('login', function(){ return view('admin.login');     } );
-Route::get('user',  function(){ return view('admin.user');      } )->name('agregar');
-
-Route::get('registro',  function(){ return view('admin.registro');      } );
-Route::get('data',  function(){ return view('admin.data');      } );
-Route::get('certificaciones',  function(){ return view('admin.certificaciones');      } );
-Route::get('empresas',  function(){ return view('admin.empresas');      } );
 //Equipos
-//Route::get('equipos',  function(){ return view('admin.equipos'); });
 Route::get('equipos', 'EquiposController@create');
 //Agregar un equipo a la base de datos
 Route::post('equipos', 'EquiposController@store');
@@ -31,10 +21,7 @@ Route::post('equipo/{id?}/edit', 'EquiposController@update');
 //Borrado del equipo
 Route::get('equipo/{id?}/delete', 'EquiposController@destroy');
 
-Route::get('estados',  function(){ return view('admin.estados');      } );
-
 //Mercancias
-/*Route::get('mercancias',  function(){ return view('admin.mercancias');      } );*/
 //Lista de Mercancias
 Route::get('listmercancias', 'MercanciasController@index');
 //Formulario para agregar una nueva mercancia a la base de datos
@@ -51,7 +38,6 @@ Route::post('mercancia/{id?}/edit', 'MercanciasController@update');
 Route::get('mercancia/{id?}/delete', 'MercanciasController@destroy');
 
 //Servicios
-/*Route::get('servicios',  function(){ return view('admin.servicios');      } );*/
 //Lista de Servicios
 Route::get('listservicios', 'ServiciosController@index');
 //Formulario para agregar una nueva servicio a la base de datos
@@ -128,16 +114,16 @@ Route::post('Actividades/{id?}/edit', 'ActividadesController@update');
 Route::get('Actividades/{id?}/delete', 'ActividadesController@destroy');
 
 //Empresas
-Route::get('/newempresa','EmpresasControllerr@create') -> name('nueva');
-Route::post('/newempresa','EmpresasControllerr@store');
-Route::get('/empresas/{id?}','EmpresasControllerr@show')-> name('test');
-Route::post('/empresas/{id?}/delete','EmpresasControllerr@destroy');
-Route::get('/empresas/{id?}/edit','EmpresasControllerr@edit');
-Route::post('/empresas/{id?}/edit','EmpresasControllerr@update');
+Route::get('/newempresa','EmpresasController@create') -> name('nueva');
+Route::post('/newempresa','EmpresasController@store');
+Route::get('/empresas/{id?}','EmpresasController@show')-> name('test');
+Route::post('/empresas/{id?}/delete','EmpresasController@destroy');
+Route::get('/empresas/{id?}/edit','EmpresasController@edit');
+Route::post('/empresas/{id?}/edit','EmpresasController@update');
 
 //Certificaciones
 //Lista de Certificaciones
-Route::get('listcertificacion', 'CertificacionesController@index');
+Route::get('listcertificaciones', 'CertificacionesController@index');
 Route::get('certificaciones', 'CertificacionesController@create');
 Route::post('certificaciones', 'CertificacionesController@store');
 Route::get('certificaciones/{id?}', 'CertificacionesController@show');

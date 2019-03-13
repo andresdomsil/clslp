@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Empresa;
 
-class EmpresasControllerr extends Controller
+class EmpresasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -25,7 +25,7 @@ class EmpresasControllerr extends Controller
      */
     public function create()
     {
-        return view('empresas.empresas_create');
+        return view('empresas.create');
     }
 
     /**
