@@ -43,7 +43,7 @@ class ServiciosController extends Controller
 
         $servicio->save();
 
-        return redirect('servicios')->with('status', 'Se agrego correctamente la servicio.');
+        return redirect('servicios')->with('status', 'Se agrego correctamente el servicio.');
     }
 
     /**

@@ -2,7 +2,9 @@
 
 //Home
 Route::get('/', 'HomeController@index');
-Route::get('/home', 'EmpresasController@index');
+Route::get('perfil/{id}', 'HomeController@show');
+
+Route::get('home', 'EmpresasController@index');
 //Login, registro, etc...
 Auth::routes();
 
@@ -114,12 +116,13 @@ Route::post('Actividades/{id?}/edit', 'ActividadesController@update');
 Route::get('Actividades/{id?}/delete', 'ActividadesController@destroy');
 
 //Empresas
+Route::get('listaempresas', 'EmpresasController@index');
 Route::get('/newempresa','EmpresasController@create') -> name('nueva');
 Route::post('/newempresa','EmpresasController@store');
 Route::get('/empresas/{id?}','EmpresasController@show')-> name('test');
-Route::post('/empresas/{id?}/delete','EmpresasController@destroy');
 Route::get('/empresas/{id?}/edit','EmpresasController@edit');
 Route::post('/empresas/{id?}/edit','EmpresasController@update');
+Route::get('/empresas/{id?}/delete','EmpresasController@destroy');
 
 //Certificaciones
 //Lista de Certificaciones

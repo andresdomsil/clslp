@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -86,6 +86,7 @@
           @if($empresas->isEmpty())
             <p>No hay Empresas.</p>
           @else
+          <div class="table-responsive">
           <table class="table table-hover table-striped">
             <thead>
               <tr>
@@ -108,17 +109,19 @@
                 <td>{!! $empresa -> email !!}</td>
                 <td>{!! $empresa -> web !!}</td>
                 <td class="actions">
-                  <a class="btn btn-sm btn-icon btn-pure btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                    <a href="{{ url('/perfil/'.$empresa -> id) }}" class="btn btn-sm btn-icon btn-pure btn-success" class="btn btn-pencil">
+                      <i class="fa fa-pencil" aria-hidden="true" ></i> Ver
+                  </a>
                 </td>
               </tr>
             @endforeach
           </tbody>
         </table>
+      </div>
       @endif
     </div>
   </div>
-
-    </div> <!-- /container -->
+</div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript

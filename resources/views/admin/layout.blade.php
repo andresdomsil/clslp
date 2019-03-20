@@ -74,15 +74,15 @@
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
         <li class="header">Menu</li>
-        <li class="active"><a href="listactividades"><i class="fa fa-link"></i> <span>Empresas</span></a></li>
+        <li class="active"><a href="{{ url('listaempresas') }}"><i class="fa fa-link"></i> <span>Empresas</span></a></li>
         <hr/>
         <!-- Optionally, you can add icons to the links -->
-        <li><a href="listactividades"><i class="fa fa-link"></i> <span>Actividades</span></a></li>
-        <li><a href="listcertificaciones"><i class="fa fa-link"></i> <span>Certificaciones</span></a></li>
-        <li><a href="listequipos"><i class="fa fa-link"></i> <span>Equipos</span></a></li>
-        <li><a href="listestado"><i class="fa fa-link"></i> <span>Estados</span></a></li>
-        <li><a href="listmercancias"><i class="fa fa-link"></i> <span>Mercancias</span></a></li>
-        <li><a href="listservicios"><i class="fa fa-link"></i> <span>Servicios</span></a></li>
+        <li><a href="{{ url('listactividades') }}"><i class="fa fa-link"></i> <span>Actividades</span></a></li>
+        <li><a href="{{ url('listcertificaciones') }}"><i class="fa fa-link"></i> <span>Certificaciones</span></a></li>
+        <li><a href="{{ url('listequipos') }}"><i class="fa fa-link"></i> <span>Equipos</span></a></li>
+        <li><a href="{{ url('listestado') }}"><i class="fa fa-link"></i> <span>Estados</span></a></li>
+        <li><a href="{{ url('listmercancias') }}"><i class="fa fa-link"></i> <span>Mercancias</span></a></li>
+        <li><a href="{{ url('listservicios') }}"><i class="fa fa-link"></i> <span>Servicios</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

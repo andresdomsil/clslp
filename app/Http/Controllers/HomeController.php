@@ -27,4 +27,16 @@ class HomeController extends Controller
         $empresas = Empresa::nombre($request->get('search'))->paginate(20);
         return view('welcome', compact('empresas'));
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $empresa = Empresa::find($id);
+        return view('perfil', compact('empresa'));
+    }
 }

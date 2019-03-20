@@ -17,7 +17,6 @@ class AddEmpresasTable extends Migration
 
 
             $table->increments('id');
-
             $table->string('nombre');
             $table->string('direccion');
             $table->string('nombre_contacto');
