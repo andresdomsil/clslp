@@ -23,7 +23,7 @@
                         <div class="form-group">
                             <label class="col-lg-2 control-label">Dirreción</label>
                             <div class="col-lg-4">
-                                <input placeholder="Dirección de la empresa" name="ad" type="text" class="form-control" required />
+                                <input  placeholder="Dirección de la empresa" name="ad" type="text" class="form-control" required />
                             </div>
                             <label class="col-lg-2 control-label">Nombre del Contacto</label>
                             <div class="col-lg-4">

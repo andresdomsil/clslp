@@ -13,7 +13,7 @@ class AddCertificacionesTable extends Migration
      */
     public function up()
     {
-        Schema::create('certificaciones', function (Blueprint $table) {
+        Schema::create('cerificaciones', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre', 45)->default(null);
             $table->timestamps();
