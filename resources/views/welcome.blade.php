@@ -66,13 +66,15 @@
       <br/>
       <br/>
       <div class="panel-heading ">
-        <h2>Empresas</h2>
+        <h2>EMPRESAS ASOCIADAS Y AFILIADAS CLÚSTER LOGISTICO DE SAN LUIS POTOSÍ</h2>
         <div class="form-group">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-12">
               <form class="navbar-form navbar-left pull rigth" role="search" method="get">
                 <div class="form-group">
-                  <input type="text" name="search" class="form-control" placeholder="Buscar empresas asociadas"  />
+                  <div class="col-md-6">
+                    <input type="text" name="search" class="form-control" placeholder="Buscar empresas asociadas"  />
+                  </div>
                 </div>
                 <button type="submit" class="btn btn-default">Buscar</button>
               </form>
