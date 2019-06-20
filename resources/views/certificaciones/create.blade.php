@@ -36,7 +36,7 @@
     			<div class="col-lg-offset-2 col-lg-10">
     				<button type="submit" class="btn btn-default">Guardar</button>
     				<!--<button type=reset" class="btn btn-default">Cancelar</button>-->
-                    <a href="{!! action('CertificacionesController@index') !!}" class="btn btn-default">Cancelar</a>
+                    <a href="{!! action('CertificacionesController@index') !!}" class="btn btn-default">Salir</a>
     			</div>
     		</div>
     	</form>

@@ -20,4 +20,5 @@ class MercanciaEmpresa extends Model
 
     public function mercancia(){
         return $this->belongsTo(Mercancia::class);
+    }
 }

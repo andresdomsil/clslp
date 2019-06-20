@@ -35,7 +35,7 @@
                             </div>
                             <label class="col-lg-2 control-label">Nombre del Contacto</label>
                             <div class="col-lg-4">
-                                <input placeholder="Nombre del contacto principal" name="name_c" type="text" class="form-control" value="{!! $empresa->nombre_contacto !!}" required/> 
+                                <input placeholder="Nombre del contacto principal" name="name_c" type="text" class="form-control" value="{!! $empresa->nombre_contacto !!}" required/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -66,7 +66,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-lg-3">
-                                <input type="checkbox" name="immex" {!! $empresa->programa_immex == 1?"checked":""!!} />&nbsp;Programa IMMEX 
+                                <input type="checkbox" name="immex" {!! $empresa->programa_immex == 1?"checked":""!!} />&nbsp;Programa IMMEX
                             </div>
                             <div class="col-lg-3">
                                 <input type="checkbox" name="mp"  {!! $empresa->material_peligros == 1?"checked":""!!} />&nbsp;Materiales Peligrosos
@@ -102,13 +102,189 @@
                                 <input id="myfile" name="myfile" type="file"/>
                             </div>
                         </div>
+                        <hr />
+                        <div class="form-group">
+                          <label class="col-lg-2 control-label">Actividades</label>
+                          <div class="col-lg-2">
+                           <select class="form-control" name="actividadempresa">
+                              @foreach ($actividades as $item)
+                              <option value="{{ $item -> id }}">{{ $item -> nombre}}</option>
+                              @endforeach
+                           </select>
+                          </div>
+
+                          <label class="col-lg-2 control-label">Certificaciones</label>
+                          <div class="col-lg-2">
+                           <select class="form-control" name="certificacionempresa">
+                              @foreach ($certificaciones as $item)
+                              <option value="{{ $item -> id }}">{{ $item -> nombre}}</option>
+                              @endforeach
+                           </select>
+                          </div>
+
+                          <label class="col-lg-2 control-label">Estados Fed. (Rutas)</label>
+                          <div class="col-lg-2">
+                            <select class="form-control" name="rutas">
+                              @foreach ($estados as $item)
+                              <option value="{{ $item -> id }}">{{ $item -> nombre }}</option>
+                              @endforeach
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <div class="col-lg-4">
+                            <div class="table-responsive">
+                        			<table class="table table-hover table-striped">
+                                <thead>
+                                  <tr>
+                                    <td>Actividades</td>
+                                    <td>Acciones</td>
+                                  </tr>
+                                </thead>
+                                @foreach ($empxact as $item)
+                                <tr>
+                                  <td>{{ $item -> nombre}} </td>
+                                  <td><a class="btn btn-sm btn-icon btn-pure btn-danger" href="{{ url ('actividadEmpresa/'.$item->id.'/delete') }}"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                </tr>
+                                @endforeach
+                              </table>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="table-responsive">
+                        			<table class="table table-hover table-striped">
+                                <thead>
+                                  <tr>
+                                    <td>Certificaciones</td>
+                                    <td>Acciones</td>
+                                  </tr>
+                                </thead>
+                                @foreach ($empxcer as $item)
+                                <tr>
+                                  <td>{{ $item -> nombre}} </td>
+                                  <td><a class="btn btn-sm btn-icon btn-pure btn-danger" href="{{ url ('certificacionEmpresa/'.$item->id.'/delete') }}"><i class="fa fa-trash" aria-hidden=="true"></i></a></td>
+                                </tr>
+                                @endforeach
+                              </table>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="table-responsive">
+                              <table class="table table-hover table-striped">
+                                <thead>
+                                  <tr>
+                                    <td>Estados</td>
+                                    <td>Acciones</td>
+                                  </tr>
+                                </thead>
+                                @foreach ($rutas as $item)
+                                <tr>
+                                  <td>{{ $item -> nombre}} </td>
+                                  <td><a class="btn btn-sm btn-icon btn-pure btn-danger" href="{{ url ('ruta/'.$item->id.'/delete') }}"><i class="fa fa-trash" aria-hidden=="true"></i></a></td>
+                                </tr>
+                                @endforeach
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="form-group">
+                          <label class="col-lg-2 control-label">Equipos</label>
+                          <div class="col-lg-2">
+                            <select class="form-control" name="equipos">
+                              @foreach ($equipos as $item)
+                              <option value="{{ $item -> id }}">{{ $item -> nombre }}</option>
+                              @endforeach
+                            </select>
+                          </div>
+
+                          <label class="col-lg-2 control-label">Mercancías</label>
+                          <div class="col-lg-2">
+                            <select class="form-control" name="mercancias">
+                              @foreach ($mercancias as $item)
+                              <option value="{{ $item -> id }}">{{ $item -> nombre }}</option>
+                              @endforeach
+                            </select>
+                          </div>
+
+                          <label class="col-lg-2 control-label">Servicios</label>
+                          <div class="col-lg-2">
+                            <select class="form-control" name="servicios">
+                              @foreach ($servicios as $item)
+                              <option value="{{ $item -> id }}">{{ $item -> nombre }}</option>
+                              @endforeach
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <div class="col-lg-4">
+                            <div class="table-responsive">
+                        			<table class="table table-hover table-striped">
+                                <thead>
+                                  <tr>
+                                    <td>Equipos</td>
+                                    <td>Acciones</td>
+                                  </tr>
+                                </thead>
+                                @foreach ($empxequ as $item)
+                                <tr>
+                                  <td>{{ $item -> nombre}} </td>
+                                  <td><a class="btn btn-sm btn-icon btn-pure btn-danger" href="{{ url ('equipoEmpresa/'.$item->id.'/delete') }}"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                </tr>
+                                @endforeach
+                              </table>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-4">
+                            <div class="table-responsive">
+                        			<table class="table table-hover table-striped">
+                                <thead>
+                                  <tr>
+                                    <td>Mercancías</td>
+                                    <td>Acciones</td>
+                                  </tr>
+                                </thead>
+                                @foreach ($empxmer as $item)
+                                <tr>
+                                  <td>{{ $item -> nombre}} </td>
+                                  <td><a class="btn btn-sm btn-icon btn-pure btn-danger" href="{{ url ('mercanciaEmpresa/'.$item->id.'/delete') }}"><i class="fa fa-trash" aria-hidden=="true"></i></a></td>
+                                </tr>
+                                @endforeach
+                              </table>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-4">
+                            <div class="table-responsive">
+                              <table class="table table-hover table-striped">
+                                <thead>
+                                  <tr>
+                                    <td>Servicios</td>
+                                    <td>Acciones</td>
+                                  </tr>
+                                </thead>
+                                @foreach ($empxser as $item)
+                                <tr>
+                                  <td>{{ $item -> nombre}} </td>
+                                  <td><a class="btn btn-sm btn-icon btn-pure btn-danger" href="{{ url ('certificacionEmpresa/'.$item->id.'/delete') }}"><i class="fa fa-trash" aria-hidden=="true"></i></a></td>
+                                </tr>
+                                @endforeach
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+
                         <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-3">
                                 <button type="submit" class="btn btn-success btn-block">Guardar</button>
                             </div>
                             <div class="col-lg-3">
-                                <a href="{!! action('EmpresasController@index') !!}" class="btn btn-default btn-block">Cancelar</a>
+                                <a href="{!! action('EmpresasController@index') !!}" class="btn btn-default btn-block">Salir</a>
                             </div>
                         </div>
                     </form>

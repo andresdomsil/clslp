@@ -45,6 +45,8 @@
             <ul class="dropdown-menu">
               <li>
                 <div>
+                  <a href="{{ url('registroUser') }} ">Registro de Usuarios</a>
+                  <br/>
                   <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Logout') }}  </a>
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;"> @csrf </form>
                 </div>
@@ -80,8 +82,8 @@
         <li><a href="{{ url('listactividades') }}"><i class="fa fa-link"></i> <span>Actividades</span></a></li>
         <li><a href="{{ url('listcertificaciones') }}"><i class="fa fa-link"></i> <span>Certificaciones</span></a></li>
         <li><a href="{{ url('listequipos') }}"><i class="fa fa-link"></i> <span>Equipos</span></a></li>
-        <li><a href="{{ url('listestado') }}"><i class="fa fa-link"></i> <span>Estados</span></a></li>
-        <li><a href="{{ url('listmercancias') }}"><i class="fa fa-link"></i> <span>Mercancias</span></a></li>
+        <li><a href="{{ url('listestado') }}"><i class="fa fa-link"></i> <span>Estados Federativos</span></a></li>
+        <li><a href="{{ url('listmercancias') }}"><i class="fa fa-link"></i> <span>Mercancías</span></a></li>
         <li><a href="{{ url('listservicios') }}"><i class="fa fa-link"></i> <span>Servicios</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->

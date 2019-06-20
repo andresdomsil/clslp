@@ -93,10 +93,9 @@ class RutaController extends Controller
      */
     public function destroy($id)
     {
-        $ruta = ruta::find($id);
-        $nombre = $ruta->nombre;
+        $ruta = Ruta::find($id);
         $ruta->delete();
 
-        return redirect('listruta')->with('status', 'La ruta con descripci&oacute;n '.$nombre. " ha sido eliminado.");
+        return redirect('listaempresas')->with('status', 'La empresa ha sido actualizada correctamente.');
     }
 }

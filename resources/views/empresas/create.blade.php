@@ -27,7 +27,7 @@
                             </div>
                             <label class="col-lg-2 control-label">Nombre del Contacto</label>
                             <div class="col-lg-4">
-                                <input placeholder="Nombre del contacto principal" name="name_c" type="text" class="form-control" required/> 
+                                <input placeholder="Nombre del contacto principal" name="name_c" type="text" class="form-control" required/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -58,7 +58,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-lg-3">
-                                <input type="checkbox" name="immex" />&nbsp;Programa IMMEX 
+                                <input type="checkbox" name="immex" />&nbsp;Programa IMMEX
                             </div>
                             <div class="col-lg-3">
                                 <input type="checkbox" name="mp" />&nbsp;Materiales Peligrosos
@@ -99,7 +99,7 @@
                                 <button type="submit" class="btn btn-success btn-block">Guardar</button>
                             </div>
                             <div class="col-lg-3">
-                                <a href="{!! action('EmpresasController@index') !!}" class="btn btn-default btn-block">Cancelar</a>
+                                <a href="{!! action('EmpresasController@index') !!}" class="btn btn-default btn-block">Salir</a>
                             </div>
                         </div>
                     </form>

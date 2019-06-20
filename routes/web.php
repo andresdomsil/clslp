@@ -7,7 +7,9 @@ Route::get('perfil/{id}', 'HomeController@show');
 Route::get('home', 'EmpresasController@index');
 //Login, registro, etc...
 Auth::routes();
-
+Route::get('registroUser',  function() {
+  return view('admin.registro');
+});
 //Equipos
 Route::get('equipos', 'EquiposController@create');
 //Agregar un equipo a la base de datos
@@ -133,3 +135,12 @@ Route::get('certificaciones/{id?}', 'CertificacionesController@show');
 Route::get('certificaciones/{id?}/edit', 'CertificacionesController@edit');
 Route::post('certificaciones/{id?}/edit', 'CertificacionesController@update');
 Route::get('certificaciones/{id?}/delete', 'CertificacionesController@destroy');
+
+
+Route::get('actividadEmpresa/{id?}/delete', 'ActividadEmpresaController@destroy');
+
+Route::get('certificacionEmpresa/{id?}/delete', 'CertificacionEmpresaController@destroy');
+
+Route::get('equipoEmpresa/{id?}/delete', 'EquipoEmpresaController@destroy');
+
+Route::get('mercanciaEmpresa/{id?}/delete', 'MercanciaEmpresaController@destroy');
